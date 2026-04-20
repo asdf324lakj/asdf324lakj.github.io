@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://10086skynet.top/sitemap.xml
