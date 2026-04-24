@@ -1,224 +1,167 @@
-<html>
 
-<head>
+
+<!doctype html>
+<html class="not-ready lg:text-base" style="--bg: #faf8f1" lang="zh-CN" dir="ltr">
+    <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <meta name="generator" content="Gridea Pro 1.1.1">
+    <title>NothingBlog</title>
+
+    <meta name="theme-color" />
+    <meta name="description" content="nothing" />
+    <meta name="author" content="NothingBlog" />
+
+    <link rel="preload stylesheet" as="style" href="/styles/main.css" />
+
     
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="generator" content="Gridea Pro 1.1.1">
-<title>保存页面为单文件 | NothingBlog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1776870814">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="保存页面为单文件 | NothingBlog - Atom Feed" href="/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+    <link rel="preload" as="image" href="/icons/theme.png" />
+    
 
+    
 
+    
+    <script defer src="/scripts/highlight.min.js" onload="hljs.initHighlightingOnLoad()"></script>
+    
 
-    <meta name="description" content="" />
-    <meta name="keywords" content="work" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+    
+
+    
+
+    
+
+    
+
+    <link rel="canonical" href="https://10086skynet.top" />
 <meta name="description" content="chrome 1.地址栏中键入“chrome://flags” 2.查找“Save Page as MHTML”或“ 将Page保存为MHTML” 3.改为“enable”或“启用” 4.重启浏览器 firefox需要安装插件，没有必要搞">
 </head>
 
-<body>
-    <div class="main">
-        <div class="main-content">
-            
-<div class="site-header">
-    <a href="/">
-        <img class="avatar" src="/images/avatar.png?v=1776870814" alt="">
-    </a>
-    <h1 class="site-title">
-        NothingBlog
-    </h1>
-    <p class="site-description">
-        nothing
-    </p>
-    <div class="menu-container">
+    <body class="bg-(--bg) text-black antialiased duration-200 ease-out [-webkit-tap-highlight-color:transparent] dark:text-white">
         
-        
-        <a href="https://10086skynet.top" class="menu" target="_blank">
-            首页
-        </a>
-        
-        
-        
-        <a href="https://10086skynet.top/post/ax9yB5qi4C" class="menu" target="_blank">
-            book
-        </a>
-        
-        
-        
-        <a href="https://10086skynet.top/post/wer435eN0K" class="menu" target="_blank">
-            star
-        </a>
-        
-        
-        
-        <a href="https://10086skynet.top/about" class="menu" target="_blank">
-            关于
-        </a>
-        
-        
-    </div>
-    <div class="social-container">
-        
-        
-        
-        
-        
-    </div>
-</div>
 
-            <div class="post-detail">
-                <article class="post">
-                    <h2 class="post-title">
-                        保存页面为单文件
-                    </h2>
-                    <div class="post-info">
-                        <span>
-                            2020-05-10
-                        </span>
-                        <span>
-                            1 分钟阅读
-                        </span>
-                        
-                        <a href="/tag/work/" class="post-tag">
-                            # work
-                        </a>
-                        
-                    </div>
-                    
-                    <img class="post-feature-image" src="/post-images/eEf7W8ewafdy.ico" alt="">
-                    
-                    <div class="post-content-wrapper">
-                        <div class="post-content" v-pre>
-                            <p>chrome<br />
+<header class="mx-auto flex h-[4.5rem] max-w-(--w) px-8 whitespace-nowrap lg:justify-center">
+    <div class="relative z-50 flex items-center ltr:mr-auto rtl:ml-auto">
+        <a class="-translate-y-[1px] text-2xl font-medium" href="https://10086skynet.top">NothingBlog</a>
+        <div class="btn-dark text-[0px] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(/icons/theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]" role="button" aria-label="Dark"></div>
+    </div>
+
+    <div class="btn-menu relative z-50 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden ltr:-mr-8 rtl:-ml-8" role="button" aria-label="Menu"></div>
+
+    <script>
+        (function() {
+            var htmlClass = document.documentElement.classList;
+            setTimeout(function() { htmlClass.remove('not-ready'); }, 10);
+
+            var btnMenu = document.querySelector('.btn-menu');
+            if (btnMenu) {
+                btnMenu.addEventListener('click', function() { htmlClass.toggle('open'); });
+            }
+
+            var metaTheme = document.querySelector('meta[name="theme-color"]');
+            var lightBg = '#faf8f1';
+            var defaultMode = 'auto';
+
+            function setDark(isDark) {
+                if (metaTheme) { metaTheme.setAttribute('content', isDark ? 'rgb(0 0 0 / 85%)' : lightBg); }
+                htmlClass[isDark ? 'add' : 'remove']('dark');
+                try { localStorage.setItem('dark', isDark); } catch(e) {}
+            }
+
+            var darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+            var stored = null;
+            try { stored = localStorage.getItem('dark'); } catch(e) {}
+            if (stored === 'true' || stored === 'false') {
+                setDark(stored === 'true');
+            } else if (defaultMode === 'dark') {
+                setDark(true);
+            } else if (defaultMode === 'light') {
+                setDark(false);
+            } else {
+                setDark(darkScheme.matches);
+            }
+
+            darkScheme.addEventListener('change', function(event) { setDark(event.matches); });
+
+            var btnDark = document.querySelector('.btn-dark');
+            if (btnDark) {
+                btnDark.addEventListener('click', function() {
+                    var cur = null;
+                    try { cur = localStorage.getItem('dark'); } catch(e) {}
+                    setDark(cur !== 'true');
+                });
+            }
+        })();
+    </script>
+
+    <div class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full flex-col justify-center bg-(--bg) pb-16 duration-200 select-none lg:static lg:h-auto lg:flex-row lg:bg-transparent! lg:pb-0 lg:transition-none">
+        
+        <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse">
+            
+                <a class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal" href="https://10086skynet.top">首页</a>
+            
+                <a class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal" href="https://10086skynet.top/post/ax9yB5qi4C">book</a>
+            
+                <a class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal" href="https://10086skynet.top/post/wer435eN0K">star</a>
+            
+                <a class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal" href="https://10086skynet.top/about">关于</a>
+            
+        </nav>
+        
+
+        
+    </div>
+</header>
+
+
+        <main class="prose prose-neutral dark:prose-invert relative mx-auto min-h-[calc(100vh-9rem)] max-w-(--w) px-8 pt-14 pb-16">
+            
+<article>
+    <header class="mb-14">
+        <h1 class="my-0! pb-2.5">保存页面为单文件</h1>
+
+        <div class="text-xs antialiased opacity-60">
+            <time>2020-05-10T17:24:52+08:00</time>
+            
+        </div>
+    </header>
+
+    <section><p>chrome<br />
 1.地址栏中键入“chrome://flags”<br />
 2.查找“Save Page as MHTML”或“ 将Page保存为MHTML”<br />
 3.改为“enable”或“启用”<br />
 4.重启浏览器</p>
 <p>firefox需要安装插件，没有必要搞</p>
+</section>
 
-                        </div>
-                        <div class="toc-container">
-                            
-                        </div>
-                    </div>
-                </article>
-            </div>
+    
+    <footer class="mt-12 flex flex-wrap">
+        
+            <a class="mb-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/[8%] dark:hover:bg-white/[12%]" href="/tag/work/">work</a>
+        
+    </footer>
+    
+</article>
 
-            
-            <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="/post/qdsfscDGrjGAXresfgsdfg/">
-                    <h3 class="post-title">
-                        welcome_to_rabbit_hole
-                    </h3>
-                </a>
-            </div>
-            
+        </main>
 
-            
-
-            
-<div class="site-footer">
-    &lt;html&gt;
-&lt;head&gt;
-&lt;meta http-equiv=&#34;Content-Type&#34; content=&#34;text/html; charset=gb2312&#34; /&gt;
-
- &lt;script type=&#34;text/javascript&#34;&gt;
-  window.onload=function(){
-   window.requestAnimationFrame(getDate)
-  }
-  function getDate(){
-   window.setTimeout(function(){
-    window.requestAnimationFrame(getDate)
-   },1000/2)
-   var d=new Date();   
-   var year=d.getFullYear()  //获取年
-   var month=d.getMonth()&#43;1;  //获取月，从 Date 对象返回月份 (0 ~ 11)，故在此处&#43;1
-   var day=d.getDay()    //获取日
-   var days=d.getDate() //获取日期
-   var hour=d.getHours()   //获取小时
-   var minute=d.getMinutes()  //获取分钟
-   var second=d.getSeconds()   //获取秒
-				
-   if(month&lt;10) month=&#34;0&#34;&#43;month
-   if(days&lt;10) days=&#34;0&#34;&#43;days
-   if(hour&lt;10) hour=&#34;0&#34;&#43;hour
-   if(minute&lt;10) minute=&#34;0&#34;&#43;minute
-   if(second&lt;10) second=&#34;0&#34;&#43;second
-				
-   var week=new Array(&#34;星期日&#34;,&#34;星期一&#34;,&#34;星期二&#34;,&#34;星期三&#34;,&#34;星期四&#34;,&#34;星期五&#34;,&#34;星期六&#34;)
-   var Tools=document.getElementById(&#34;showtime&#34;)
-   var da=year&#43; &#34;.&#34; &#43;month&#43; &#34;.&#34; &#43;days&#43; &#34;_&#34; &#43;hour&#43; &#34;:&#34; &#43;minute&#43; &#34;:&#34; &#43;second&#43; &#34;_&#34; &#43;week[day]
-   Tools.innerHTML=da
-  }			
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div id=&#34;showtime&#34;&gt;&lt;/div&gt;
-&lt;/body&gt;
-
-
-&lt;p&gt;&lt;audio autoplay&gt;&lt;source src=&#34;http://23683.live.streamtheworld.com/UFM_1003AAC.aac&#34; type=&#34;audio/mpeg&#34;&gt;&lt;/audio&gt;
-
-&lt;audio controls=&#34;controls&#34;&gt;&lt;source src=&#34;http://22283.live.streamtheworld.com/UFM_1003AAC.aac&#34; type=&#34;audio/mpeg&#34;/&gt;&lt;/audio&gt;
-
-&lt;p&gt;下载地址：XXX&lt;span style=&#34;color: #ffffff;&#34;&gt;&lt;a target=&#34;_blank&#34; style=&#34;color: #ffffff;&#34; href=&#34;https://www.baidu.com/default.html&#34;&gt;*&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe src=&#34;https://ip.skk.moe/simple&#34; style=&#34;width: 100%; border: 0&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
-&lt;/html&gt;
-    <a class="rss" href="/atom.xml" target="_blank">
-        <i class="ri-rss-line"></i> RSS
-    </a>
-</div>
-
-        </div>
+        <footer class="mx-auto flex h-[4.5rem] max-w-(--w) items-center px-8 text-xs tracking-wider uppercase opacity-60">
+    <div class="mr-auto">
+        
+            &copy; 2026
+            <a class="link" href="https://10086skynet.top">NothingBlog</a>
+        
     </div>
+    
+    <a class="link" href="https://github.com/Gridea-Pro/gridea-pro" rel="noopener" target="_blank">powered by gridea pro</a>
+    
+</footer>
 
-    <script>
-        hljs.initHighlightingOnLoad()
 
-        let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
-
-        
-        
-        
-        
-        
-        
-        
         
 
-        window.addEventListener("scroll", event => {
-            let fromTop = window.scrollY;
-
-            mainNavLinks.forEach((link, index) => {
-                let section = document.getElementById(decodeURI(link.hash).substring(1));
-                let nextSection = null
-                if (mainNavLinks[index + 1]) {
-                    nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-                }
-                if (section.offsetTop <= fromTop) {
-                    if (nextSection) {
-                        if (nextSection.offsetTop > fromTop) {
-                            link.classList.add("current");
-                        } else {
-                            link.classList.remove("current");
-                        }
-                    } else {
-                        link.classList.add("current");
-                    }
-                } else {
-                    link.classList.remove("current");
-                }
-            });
-        });
-
-    </script>
-<script>console.log("\n%c ✦ Gridea Pro v1.1.1 %c · Theme: inotes v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+        
+    <script>console.log("\n%c ✦ Gridea Pro v1.1.1 %c · Theme: paper v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
 </body>
-
 </html>
