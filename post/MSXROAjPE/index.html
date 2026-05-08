@@ -832,8 +832,9 @@ fastjson在解析json对象时，会使用autoType实例化某一个具体的类
 黑白名单绕过技术：利用缓存机制-双写类名-特殊类继承如java.lang.AutoCloseable子类</p>
 <p><strong>Redis未授权访问导致XMR挖矿</strong><br />
 <a href="https://www.cnblogs.com/yuzly/p/11663822.html">https://www.cnblogs.com/yuzly/p/11663822.html</a><br />
-事件发现： 客户服务器CPU持续100%，系统响应极慢。<br />
-分析排查：<br />
+事件发现： 客户服务器CPU持续100%，系统响应极慢。</p>
+<p>条件允许，暂时将受感染服务器从外网隔离，或者在防火墙（如 iptables 或 云安全组）中封锁 Redis 端口（默认 6379）以及已知的矿池通信端口。临时关闭 Redis：在确认不影响核心业务的前提下，先关停 Redis 服务，切断攻击入口。</p>
+<p>分析排查：<br />
 进程分析： 使用 top 命令发现名为 redis-cli 或类似随机字符的进程占用大量资源。<br />
 网络连接： netstat -antlp 发现服务器与外部可疑矿池IP（如 xmr-eu1.nanopool.org）有连接。<br />
 root cause： 检查发现Redis配置未设置密码，且允许公网访问，攻击者通过写入定时任务（crontab）下载并执行XMRig脚本。<br />
