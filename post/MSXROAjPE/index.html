@@ -841,7 +841,12 @@ root cause： 检查发现Redis配置未设置密码，且允许公网访问，�
 应急处置：<br />
 隔离： 修改Redis配置 protected-mode yes，设置高强度密码，并修改默认端口6379。<br />
 清理： 杀掉挖矿进程，删除 /var/spool/cron/ 下的非法定时任务。<br />
-修复： 检查 /root/.ssh/authorized_keys 是否被植入后门。</p>
+chattr +i 锁定自身。需先运行 chattr -i &lt;文件名&gt; 才能删除<br />
+检查 /root/.ssh/authorized_keys 是否被植入后门。</p>
+<p>修复：<br />
+设置密码：在 redis.conf 中配置 requirepass your_strong_password。<br />
+绑定 IP：修改 bind 127.0.0.1，确保 Redis 仅监听内网或特定受信任 IP，严禁暴露在公网。低权限运行：确保 Redis 以独立低权限用户（如 redis 用户）运行，严禁用 root 启动。<br />
+修改默认端口：将 6379 修改为其他不常用端口以避开简单的全网扫描</p>
 </section>
 
     
