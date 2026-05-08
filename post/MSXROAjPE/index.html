@@ -816,18 +816,6 @@ eval() assert()<br />
 MSSQL：xp_cmdshell sp_OACreate<br />
 Oracle：DBMS_JAVA<br />
 MySQL：UDF</p>
-<p>Redis未授权访问导致XMR挖矿<br />
-<a href="https://www.cnblogs.com/yuzly/p/11663822.html">https://www.cnblogs.com/yuzly/p/11663822.html</a><br />
-事件发现： 客户服务器CPU持续100%，系统响应极慢。<br />
-分析排查：<br />
-进程分析： 使用 top 命令发现名为 redis-cli 或类似随机字符的进程占用大量资源。<br />
-网络连接： netstat -antlp 发现服务器与外部可疑矿池IP（如 xmr-eu1.nanopool.org）有连接。<br />
-root cause： 检查发现Redis配置未设置密码，且允许公网访问，攻击者通过写入定时任务（crontab）下载并执行XMRig脚本。<br />
-检查定时任务：crontab -l 以及检查 /etc/crontab、/etc/cron.d/、/var/spool/cron/<br />
-应急处置：<br />
-隔离： 修改Redis配置 protected-mode yes，设置高强度密码，并修改默认端口6379。<br />
-清理： 杀掉挖矿进程，删除 /var/spool/cron/ 下的非法定时任务。<br />
-修复： 检查 /root/.ssh/authorized_keys 是否被植入后门。</p>
 <p><strong>告警层面的事件以前处理过哪些？这个问的就是出现事件后的上报处置流程</strong><br />
 国家网络安全事件应急预案-网络信息安全事件可分为七类四个等级<br />
 实例：<br />
@@ -849,6 +837,19 @@ root cause： 检查发现Redis配置未设置密码，且允许公网访问，�
 噪声来源：公网扫描-内部服务-重复告警<br />
 解决方法：告警分级-去重-抑制-白名单过滤-全流量整合<br />
 总结：平台能够筛选出真正需要人工处理的、有威胁的安全事件，把最高优先级的告警凸显出来，减少无效告警和误报</p>
+<p><strong>webshell 连接工具的特征</strong></p>
+<p><strong>Redis未授权访问导致XMR挖矿</strong><br />
+<a href="https://www.cnblogs.com/yuzly/p/11663822.html">https://www.cnblogs.com/yuzly/p/11663822.html</a><br />
+事件发现： 客户服务器CPU持续100%，系统响应极慢。<br />
+分析排查：<br />
+进程分析： 使用 top 命令发现名为 redis-cli 或类似随机字符的进程占用大量资源。<br />
+网络连接： netstat -antlp 发现服务器与外部可疑矿池IP（如 xmr-eu1.nanopool.org）有连接。<br />
+root cause： 检查发现Redis配置未设置密码，且允许公网访问，攻击者通过写入定时任务（crontab）下载并执行XMRig脚本。<br />
+检查定时任务：crontab -l 以及检查 /etc/crontab、/etc/cron.d/、/var/spool/cron/<br />
+应急处置：<br />
+隔离： 修改Redis配置 protected-mode yes，设置高强度密码，并修改默认端口6379。<br />
+清理： 杀掉挖矿进程，删除 /var/spool/cron/ 下的非法定时任务。<br />
+修复： 检查 /root/.ssh/authorized_keys 是否被植入后门。</p>
 </section>
 
     
