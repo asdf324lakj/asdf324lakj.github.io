@@ -699,45 +699,7 @@ DNS 请求流：<br />
 <p>如何看dns外带<br />
 搜索 dns 协议包中，包含 ${jndi 和常用 DNSLog 域名的请求<br />
 关注 nslookup、dig 等高频的域名查询流量</p>
-<p>12、struts2漏洞流量特征是什么？<br />
-13、对于菜刀、冰蝎、哥斯拉、蚁剑的流量特征是什么？<br />
-哥斯拉<br />
-哥斯拉最明显的特征是cookie后面带了;，即使后续没有任何其他内容<br />
-响应体有一定特征：哥斯拉会把一个32位的md5字符串按照一半拆分，分别放在base64编码的数据的前后两部分。整个响应包的结构体征为：md5前十六位+base64+md5后十六位<br />
-冰蝎2<br />
-使用AES-16+Base64加密<br />
-需要两次GET访问获取密钥<br />
-GET访问中默认webshell的密码为pass，参数值为3位随机数字<br />
-密钥是直接接以16位字符的形式返回到客户端<br />
-accept里有个q=.2（强特征）<br />
-冰蝎3<br />
-用AES-16+Base64加密的方式，取消了动态获取密钥的方式，使用固定密钥。AES使用的密钥为Webshell连接密码MD5的前面16位，默认为rebeyond即密钥为e45e329feb5d925b<br />
-一般在第二次会返回一个长度比较大的响应包，对应内容为phpinfo页面<br />
-连接jsp的webshell的请求数据包中的content-type字段常见为application/octet-stream<br />
-冰蝎4<br />
-Content-Type字段（弱特征）通常是Content-type: Application/x-www-form-urlencoded<br />
-Accept字段（弱特征）通常是Accept: application/json, text/javascript, <em>/</em>; q=0.01<br />
-在没有使用自定义传输的情况下，使用的是跟3一样的方式，默认为rebeyond即密钥为e45e329feb5d925b<br />
-密文的长度为16的整数倍<br />
-蚁剑静态<br />
-php使用assert、eval执行<br />
-asp使用eval执行<br />
-jsp使用Java类加载（ClassLoader）<br />
-会带有base64encode、decode的特征<br />
-蚁剑动态<br />
-存在@ini_set(&ldquo;display_errors&rdquo;, &ldquo;0&rdquo;);@set_time_limit(0);开头<br />
-中间存在echo &ldquo;d0fa&rdquo;.&ldquo;402e&rdquo;、echo &ldquo;8ae&rdquo;.&ldquo;52a&quot;类此的拼接的随机数<br />
-响应体格式为随机数 结果 随机数，其中两个随机数源于请求体中拼接随机数<br />
-结果有时候会采用base64编码，解码可以发现其攻击行为<br />
-菜刀静态<br />
-PHP:  <?php @eval([$_post['hacker']]); ?><br />
-ASP:  &lt;% eval request(&ldquo;hacker&rdquo;)%&gt;<br />
-ASP.NET:  &lt;%@ Page Language=&ldquo;Javascript&rdquo;%&gt;&lt;% eval(Request.Item[&ldquo;hacker&rdquo;],&ldquo;unsafe&rdquo;);%&gt;<br />
-菜刀动态<br />
-payload在请求体中，采用url编码+base64编码，payload部分是明文传输<br />
-payload中有eval或assert、base64_decode这样的字符<br />
-payload中有默认固定的&amp;z0=QGluaV9zZXQ…这样base64加密的攻击载荷，参数z0对应$_POST[z0]接收到的数据，且固定为QGluaV9zZXQ开头<br />
-进行base64解码后可看到代码：@ini_set(“display_errors”,“0”);@set_time_limit(0);@set_magic_quotes_runtime(0);这段意思是首先关闭报错和magic_quotes，接下来去获取主机的信息</p>
+<p>12、struts2漏洞流量特征是什么？</p>
 <p>msf的流量特征是什么<br />
 默认使用4444端口作为反向连接端口<br />
 连接建立后，MSF 会发送一个特定的 4 字节数据</p>
@@ -775,10 +737,7 @@ servlet-api型（通过命令执行等方式动态注册一个新的listener、f
 查看检查服务器web日志，查看有无可疑的 web 访问日志，比刘说 filter 或者listener 类型的内存马，会有大量url请求路径相同但是附带不同参数的记录，或者页面本身并不存在但是返回 200的请求，通过查找返回 200的urll路径对比 web 目录下是否真实文件，如不存在大概率是内存马，如果Web日志中并未发现异常，可以排查是否为中间件漏洞导致代码执行注入内存马，中间件日志查看是否有可疑的报错。根据注入时间和方法，业务使用的组件排查是否可能存在java代码执行漏洞以及是否存在过 webshell，排查框架漏洞，反序列化漏洞。查看是否有类似哥斯拉、冰蝎特征的urｌ清求，哥斯拉和冰蝎的内存马注入流量特征与普通webshell的流量特征基本差不多</p>
 <p>16、安全设备面对大量攻击的时候要如何处置？</p>
 <p>19、详细应急流程+命令+实际案例</p>
-<p>20、fastjsion 漏洞特征 流量特征 攻击成功特征 漏洞利用无回显示如何判断成功 不出网如何利用<br />
-fastjson在解析json的过程中，支持使用autoType来实例化某一个具体的类，autoType标注了类对应的原始类型，方便在反序列化的时候定位到具体类型，fastjson在对JSON字符串进行反序列化的时候，就会读取@type到内容，试图把JSON内容反序列化成这个对象，并且会调用这个类的setter方法。并调用该类的set/get方法来访问属性。通过查找代码中相关的方法，即可构造出一些恶意利用链,造成远程代码执行<br />
-特征1根据返回包判断，json数据里有恶意代码片段，@type 指定恶意的类<br />
-特征2利用dnslog盲打</p>
+<p>20、</p>
 <p>shiro反序列化原理+特征：<br />
 Apache Shiro 是一个强大易用的 Java 安全框架，提供了认证、授权、加密和会话管理等功能，对于任何一个应用程序，Shiro 都可以提供全面的安全管理服务。在Apache Shiro&lt;=1.2.4版本中AES加密时采用的key是硬编码在代码中的，于是我们就可以构造RememberMe的值，然后让其反序列化执行<br />
 特征1cookie中含有rememberMe字段</p>
@@ -837,7 +796,40 @@ MySQL：UDF</p>
 噪声来源：公网扫描-内部服务-重复告警<br />
 解决方法：告警分级-去重-抑制-白名单过滤-全流量整合<br />
 总结：平台能够筛选出真正需要人工处理的、有威胁的安全事件，把最高优先级的告警凸显出来，减少无效告警和误报</p>
-<p><strong>webshell 连接工具的特征</strong></p>
+<p><strong>webshell 连接工具的特征</strong><br />
+菜刀特征：<br />
+1.UserAgent为百度爬虫<br />
+2.请求体中存在eval，base64等特征字符<br />
+3.请求体中传递的payload为base64编码，请求包可以使用base64编码进行解码<br />
+4.请求体中执行结果响应为明文 X@Y 结果 X@Y<br />
+5.静态PHP:  <?php @eval([$_post['hacker']]); ?><br />
+6.静态ASP:  &lt;% eval request(&ldquo;hacker&rdquo;)%&gt;<br />
+7.静态ASP.NET:  &lt;%@ Page Language=&ldquo;Javascript&rdquo;%&gt;&lt;% eval(Request.Item[&ldquo;hacker&rdquo;],&ldquo;unsafe&rdquo;);%&gt;<br />
+蚁剑特征：<br />
+1.每个请求体中都存在@ini_set(&ldquo;display_errors&rdquo;, &ldquo;0&rdquo;);@set_time_limit(0)开头，且存在base64等字符<br />
+2.返回包的结果格式为 随机数 结果 随机数<br />
+3.静态php使用assert、eval执行<br />
+4.静态asp使用eval执行<br />
+5.静态jsp使用Java类加载（ClassLoader）会带有base64encode、decode的特征<br />
+冰蝎特征：<br />
+1.默认为rebeyond即密钥为e45e329feb5d925b<br />
+2.密文的长度为16的整数倍<br />
+3.Content-Type字段（弱特征）通常是Content-type: Application/x-www-form-urlencoded<br />
+4.Accept字段（弱特征）通常是Accept: application/json, text/javascript, <em>/</em>; q=0.01<br />
+哥斯拉特征：<br />
+1.请求中都包含Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,<em>/</em>;q=0.8<br />
+2.响应中都包含Cache-Control: no-store, no-cache, must-revalidate<br />
+3.cookie后面带了分号<br />
+4.整个响应包的结构体征为：md5前十六位+base64+md5后十六位</p>
+<p><strong>fastjsion 漏洞特征 流量特征 攻击成功特征 漏洞利用无回显示如何判断成功 不出网如何利用</strong><br />
+fastjson在解析json对象时，会使用autoType实例化某一个具体的类，并调用set/get方法访问属性。<br />
+漏洞出现在Fastjson autoType处理json对象时，没有对@type字段进行完整的安全性验证，我们可以传入危险的类并调用危险类连接远程RMI服务器，通过恶意类执行恶意代码，进而实现远程代码执行漏洞。<br />
+特征1根据返回包判断，json数据里有恶意代码片段，@type 指定恶意的类<br />
+特征2包含危险协议：ldap rmi dnslog盲打<br />
+不出网特征1：Payload 包含 bytecodes: 编码后的恶意字节码。<br />
+不出网特征2：TemplatesImpl相关类<br />
+变种攻击特征：json中java.lang.Class预先加载动态类<br />
+黑白名单绕过技术：利用缓存机制-双写类名-特殊类继承如java.lang.AutoCloseable子类</p>
 <p><strong>Redis未授权访问导致XMR挖矿</strong><br />
 <a href="https://www.cnblogs.com/yuzly/p/11663822.html">https://www.cnblogs.com/yuzly/p/11663822.html</a><br />
 事件发现： 客户服务器CPU持续100%，系统响应极慢。<br />
