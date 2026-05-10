@@ -869,17 +869,46 @@ fastjson在解析json对象时，会使用autoType实例化某一个具体的类
 <p>分析排查：<br />
 进程分析： 使用 top 命令发现名为 redis-cli 或类似随机字符的进程占用大量资源。<br />
 网络连接： netstat -antlp 发现服务器与外部可疑矿池IP（如 xmr-eu1.nanopool.org）有连接。<br />
-root cause： 检查发现Redis配置未设置密码，且允许公网访问，攻击者通过写入定时任务（crontab）下载并执行XMRig脚本。<br />
+检查发现Redis配置未设置密码，且允许公网访问，攻击者通过写入定时任务（crontab）下载并执行XMRig脚本。<br />
+攻击者通常会修改 crontab 以实现自动下载和运行<br />
 检查定时任务：crontab -l 以及检查 /etc/crontab、/etc/cron.d/、/var/spool/cron/<br />
-应急处置：<br />
-隔离： 修改Redis配置 protected-mode yes，设置高强度密码，并修改默认端口6379。<br />
-清理： 杀掉挖矿进程，删除 /var/spool/cron/ 下的非法定时任务。<br />
+删除可疑的下载脚本（如 curl -sL http://&hellip; | bash）<br />
+检查系统服务：查看 /etc/systemd/system/ 下是否有新创建的可疑服务文件</p>
+<p>应急处置：<br />
+隔离：<br />
+修改Redis配置 protected-mode yes<br />
+redis.conf 中配置 requirepass your_strong_password<br />
+修改默认端口6379<br />
+Redis 仅监听内网或特定受信任 IP，严禁暴露在公网<br />
+确保 Redis 以独立低权限用户运行，严禁用 root 启动<br />
+清理：<br />
+杀掉挖矿进程，删除 /var/spool/cron/ 下的非法定时任务。<br />
+清理文件与锁定检查 /tmp/、/var/tmp/、/dev/shm/ 等目录下的可疑执行文件（常见名称如 config.json、xmrig。<br />
 chattr +i 锁定自身。需先运行 chattr -i &lt;文件名&gt; 才能删除<br />
-检查 /root/.ssh/authorized_keys 是否被植入后门。</p>
-<p>修复：<br />
+检查 /root/.ssh/authorized_keys 是否被植入后门。<br />
+Redis 写入了 SSH 公钥：检查 /root/.ssh/authorized_keys 文件。删除不明公钥<br />
+矿池地址：通过 netstat -antp 记录木马连接的远程 IP，可以在 微步在线 等平台查询其是否为已知矿池<br />
+修复：<br />
 设置密码：在 redis.conf 中配置 requirepass your_strong_password。<br />
 绑定 IP：修改 bind 127.0.0.1，确保 Redis 仅监听内网或特定受信任 IP，严禁暴露在公网。低权限运行：确保 Redis 以独立低权限用户（如 redis 用户）运行，严禁用 root 启动。<br />
 修改默认端口：将 6379 修改为其他不常用端口以避开简单的全网扫描</p>
+<p>19点-20点 面试20分钟左右<br />
+项目内容:看安全设备告警，做应急，渗透，互联网资产收集<br />
+接触过哪些安全设备<br />
+拿漏洞举例，有告警如何判断攻击是否成功<br />
+fastjson反序列化的原理，告警特征，判断是否攻击成功，讲一下不出网的情况<br />
+shiro反序列化的攻击特征<br />
+告警降噪<br />
+详细应急过程 矿脚本杀不掉的情况如何处理<br />
+webshell应急响应<br />
+a公网服务，b和公网一个段不出网，告警发现a攻击b，但是a上面没有发现后门，是什么情况<br />
+如何处理内存马<br />
+告警事件处理流程<br />
+渗透的时候挖了哪些漏洞<br />
+给你一个登录页面测哪些内容<br />
+ssrf原理，出现在什么地方，绕过，防护<br />
+资产测绘收集哪些信息<br />
+webshell的流量特征</p>
 </section>
 
     
